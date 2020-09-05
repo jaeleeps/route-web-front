@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+// import './App.scss';
 
 // common component
-import TopNavBarComponent from './components/TopNavBarComponent/TopNavBarComponent';
+// import MaterialTopNavBarComponent from './components/MaterialTopNavBarComponent/MaterialTopNavBarComponent';
+import TopNavBarComponent from './components/TopNavBarCompontnent/TopNavBarComponent';
 
 // page component
 import HomePageComponent from './pages/home/HomePageComponent/HomePageComponent';
@@ -14,6 +15,7 @@ import { Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      {/* <MaterialTopNavBarComponent /> */}
       <TopNavBarComponent />
       <Route path="/" component={HomePageComponent} exact={true}></Route>
       <Route path="/about" component={AboutPageComponent} exact={true}></Route>

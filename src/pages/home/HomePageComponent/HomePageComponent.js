@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HomePageComponent extends Component {
   render() {
     return (
-      <div class="home-page-component-wrapper">
+      <div className="home-page-component-wrapper page-component-wrapper">
         HOME PAGE
       </div>
     );
