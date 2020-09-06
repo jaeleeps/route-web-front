@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./TopNavBarComponent.scss";
 
 const TopNavBarComponent = () => {
@@ -6,11 +7,19 @@ const TopNavBarComponent = () => {
   return (
 
     <div className="top-nav-bar-wrapper">
-      <div className="title-wrapper">ROUTE</div>
+      <div className="title-wrapper">
+        <Link to={`/`} activeClassName="current">ROUTE</Link>
+      </div>
       <div className="nav-tabs-wrapper">
-        <div className="nav-item">ABOUT US</div>
-        <div className="nav-item">HOME</div>
-        <div className="nav-item">CONTACT</div>
+        <div className="nav-item">
+          <Link to={`/about`} activeClassName="current">ABOUT US</Link>
+        </div>
+        <div className="nav-item">
+          <Link to={`/home`} activeClassName="current">HOME</Link>
+        </div>
+        <div className="nav-item">
+          <Link to={`/contact`} activeClassName="current">CONTACT</Link>
+        </div>
       </div>
     </div>
   );
