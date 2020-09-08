@@ -74,7 +74,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - 현재 버전/최신 버전이 아닌 안정화 된 LTS 버전을 OS에 맞게 설치해주세요 :) 
 
 2. Git
-- Git 은 소프트웨어 버전 관리 시스템(version control system)
+- 소프트웨어 버전 관리 시스템(version control system)
 - 공식 다운로드 주소: https://git-scm.com/downloads
 - 가이드: https://coding-factory.tistory.com/245
 
@@ -101,7 +101,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - https://www.thomas-krenn.com/en/wiki/Cmd_commands_under_Windows 참고
 - 해당 사이트의 명령어 중에는 다음의 것들만 알면 됩니다.
 - `dir` : 현재 디렉터리 위치에 있는 파일/폴더 리스트 나열 - mac 에서는 `ls`
-- `mkdir` [디렉터리 명] : 디렉터리(폴더) 만들기
+- `mkdir [디렉터리 명]` : 디렉터리(폴더) 만들기
 - `cd` : 디렉터리 위치 변경 - cd 를 사용하여 보통 다음의 두 액션을 합니다
 - `cd [디렉터리 명]`: 해당 디렉터리로 들어가기
 - `cd..` : 현재 디렉터리에서 벗어나 상위 디렉터리로 이동하기
@@ -161,7 +161,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ##### 가이드: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 ##### github desktop 을 이 단계부터 사용하셔도 됩니다. 하지만 clone의 경우 CLI(커맨드라인 사용하여)로 작업하는 게 빠르실거에요
 - https://github.com/jaeleeps/route-web-front 들어가기 - 생각해보니 이 페이지네요
-- 중앙 상단의 초록섹 "Code" 버튼 클릭
+- 중앙 상단의 초록 "Code" 버튼 클릭
 - 주소 복사 (https://github.com/jaeleeps/route-web-front.git)
 - 작업 폴더 위치 에서 명령어 실행
 - `git clone https://github.com/jaeleeps/route-web-front.git`
