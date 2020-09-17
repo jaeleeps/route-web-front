@@ -1,53 +1,68 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 import "./TopNavBarComponent.scss";
+export class TopNavBarComponent extends React.Component {
 
-const TopNavBarComponent = () => {
-  return (
-    <div className="top-nav-bar-wrapper">
-      <div className="title-wrapper">
-        <Link to={`/`} activeClassName="current">
-          ROUTE
-        </Link>
-      </div>
+  static defaultProps = {
+    theme: 'white-black'
+  };
 
-      <div className="nav-tabs-wrapper">
-        <div className="nav-item">
-          <Link to={`/about`} activeClassName="current">
-            ABOUT US
-          </Link>
+  componentDidMount() {
+    console.log(window.location.pathname, this.props.theme);
+  }
+  
+  render() {
+    return (
+      <div className=
+      {
+        `top-nav-bar-wrapper ${true ? "web" : "mobile"} ${this.props.theme}`}>
+        <div className="title-wrapper">
+          <NavLink to={`/`} activeClassName="current">
+            ROUTE
+          </NavLink>
         </div>
-        {/* <div className="nav-item">
-          <Link to={`/home`} activeClassName="current">HOME</Link>
-        </div> */}
-        <div className="nav-item">
-          <Link to={`/`} activeClassName="current">
-            MEMBERS
-          </Link>
+  
+        <div className="nav-tabs-wrapper">
+          <div className="nav-item">
+            <NavLink to={`/about`} activeClassName="current">
+              ABOUT US
+            </NavLink>
+          </div>
+          {/* <div className="nav-item">
+            <Link to={`/home`} activeClassName="current">HOME</Link>
+          </div> */}
+          <div className="nav-item">
+            <NavLink to={`/`} activeClassName="current">
+              MEMBERS
+            </NavLink>
+          </div>
+          <div className="nav-item">
+            <NavLink to={`/`} activeClassName="current">
+              CAREER
+            </NavLink>
+          </div>
+          <div className="nav-item">
+            <NavLink to={`/`} activeClassName="current">
+              SERVICE
+            </NavLink>
+          </div>
+          <div className="nav-item">
+            <NavLink to={`/contact`} activeClassName="current">
+              CONTACT
+            </NavLink>
+          </div>
         </div>
-        <div className="nav-item">
-          <Link to={`/`} activeClassName="current">
-            CAREER
-          </Link>
-        </div>
-        <div className="nav-item">
-          <Link to={`/`} activeClassName="current">
-            SERVICE
-          </Link>
-        </div>
-        <div className="nav-item">
-          <Link to={`/contact`} activeClassName="current">
-            CONTACT
-          </Link>
+  
+        <div className="short-cut-items-wrapper">
+          <div className="short-cut-item-icon-wrapper"></div>
+          <div className="short-cut-item-icon-wrapper"></div>
+          <div className="short-cut-item-icon-wrapper"></div>
         </div>
       </div>
+    );
+  }
+}
 
-      <div className="short-cut-items-wrapper">
-        <div className="short-cut-item-icon-wrapper"></div>
-        <div className="short-cut-item-icon-wrapper"></div>
-        <div className="short-cut-item-icon-wrapper"></div>
-      </div>
-    </div>
-  );
-};
-export default TopNavBarComponent;
+// export default TopNavBarComponent;
+
+// console.log(window.location.pathname);
