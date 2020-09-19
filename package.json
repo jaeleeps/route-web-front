@@ -42,5 +42,8 @@
     "less-loader": "^7.0.0",
     "nodemon": "^2.0.4",
     "style-loader": "^1.2.1"
+  },
+  "exports": {
+    "./": "./src"
   }
 }

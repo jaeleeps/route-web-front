@@ -1,0 +1,11 @@
+.icon-nav-link-wrapper {
+  display: flex;
+  background-position: center center;
+  background-size: contain;
+
+  > .icon-nav-link {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+  }
+}

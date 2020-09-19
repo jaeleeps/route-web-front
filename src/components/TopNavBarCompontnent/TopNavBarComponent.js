@@ -1,27 +1,31 @@
 import React from "react";
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import { IconNavLinkComponent } from "../IconNavLinkComponent/IconNavLinkComponent";
+import { IconTable } from "../../service/StringTable";
+
 import "./TopNavBarComponent.scss";
 export class TopNavBarComponent extends React.Component {
-
   static defaultProps = {
-    theme: 'white-black'
+    theme: "white-black",
   };
 
   componentDidMount() {
     console.log(window.location.pathname, this.props.theme);
   }
-  
+
   render() {
     return (
-      <div className=
-      {
-        `top-nav-bar-wrapper ${true ? "web" : "mobile"} ${this.props.theme}`}>
+      <div
+        className={`top-nav-bar-wrapper ${true ? "web" : "mobile"} ${
+          this.props.theme
+        }`}
+      >
         <div className="title-wrapper">
           <NavLink to={`/`} activeClassName="current">
             ROUTE
           </NavLink>
         </div>
-  
+
         <div className="nav-tabs-wrapper">
           <div className="nav-item">
             <NavLink to={`/about`} activeClassName="current">
@@ -52,11 +56,17 @@ export class TopNavBarComponent extends React.Component {
             </NavLink>
           </div>
         </div>
-  
+
         <div className="short-cut-items-wrapper">
-          <div className="short-cut-item-icon-wrapper"></div>
-          <div className="short-cut-item-icon-wrapper"></div>
-          <div className="short-cut-item-icon-wrapper"></div>
+          <div className="short-cut-item-icon-wrapper">
+            <IconNavLinkComponent imgSrc={IconTable.HOME} linkTo="home" />
+          </div>
+          <div className="short-cut-item-icon-wrapper">
+            <IconNavLinkComponent imgSrc={IconTable.PEOPLE} linkTo="home" />
+          </div>
+          <div className="short-cut-item-icon-wrapper">
+            <IconNavLinkComponent imgSrc={IconTable.LANGUAGE} linkTo="home" />
+          </div>
         </div>
       </div>
     );

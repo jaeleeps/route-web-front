@@ -1,9 +1,13 @@
 .top-nav-bar-wrapper {
-  color: #ffffff;
-  background-color: #000000;
+  // position: fixed;
+  z-index: 100;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  color: #ffffff;
+  background-color: #000000;
   padding: 0 2.0rem;
 
   &.transparent-black {
@@ -51,15 +55,6 @@
       width: 1.6rem;
       height: 1.6rem;
       text-align: center;
-      background-color: red;
-
-      // &:not(:last-child) {
-      //   margin-right: 6.0rem;
-      // }
     }
   }
 }
-
-// .top-nav-bar-wrapper {
-//   box-shadow: none;
-// }
