@@ -18,9 +18,9 @@ class HomePageComponent extends Component {
           </video>
         </div>
         <div className="home-page-main-content-wrapper">
-          <TopNavBarComponent theme="transparent-black" />
+          <TopNavBarComponent theme="transparent-white" />
 
-          <div className="home-page-main-content-wrapper">
+          <div className="home-page-main-content-inner-wrapper">
             
             <div className="main-logo-content-wrapper">
               <div className="logo-img-wrapper"></div>

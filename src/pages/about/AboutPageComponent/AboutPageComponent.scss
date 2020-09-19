@@ -1,0 +1,110 @@
+.about-page-component-wrapper {
+  color: #ffffff;
+  position: relative;
+
+
+
+  > .about-page-main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    > .about-page-img-banner-wrapper {
+      width: 100%;
+      height: 12rem;
+      background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500');
+      background-position: center center;
+      background-size: cover;
+    }
+
+    > .about-page-main-content-inner-wrapper {
+      display: flex;
+      flex-grow: 1;
+
+      align-items: flex-start;
+      justify-content: center;
+
+      padding: 4.6rem 0;
+
+      > .about-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        align-items: center;
+        justify-content: center;
+
+        max-width: 72rem;
+        min-width: 32rem;
+
+        > .title-wrapper {
+          display: flex;
+  
+          align-items: center;
+          justify-content: flex-start;
+
+          width: 100%;
+
+          > .title-text {
+            text-align: left;
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: 4.8px;
+            color: #707070;
+
+            white-space: nowrap;
+          }
+
+          > .title-line {
+            flex-grow: 1;
+            width: 100%;
+            height: 0.1rem;
+
+            margin-left: 1rem;
+            height: 0.2rem;
+
+            background-color: #707070;
+          }
+
+        }
+
+        > .logo-wrapper {
+          width: 12rem;
+          height: 7rem;
+
+          margin: 4.6rem 0;
+
+          background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+          background-position: center center;
+          background-size: contain;
+        }
+
+        > .about-text-wrapper {
+
+          > .paragraph-wrapper {
+            &:not(:last-child) {
+              margin-bottom: 3.2rem;
+            }
+
+            text-align: left;
+            font-size: 1.6rem;
+            color: #707070;
+
+            > .highlight {
+              font-weight: 900;
+              letter-spacing: 0.28rem;
+            }
+          }
+        }
+
+      }
+      // about-content-wrapper
+
+    }
+  }
+}
+
+
+
+
+

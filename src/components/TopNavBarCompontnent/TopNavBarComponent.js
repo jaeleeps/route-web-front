@@ -59,13 +59,13 @@ export class TopNavBarComponent extends React.Component {
 
         <div className="short-cut-items-wrapper">
           <div className="short-cut-item-icon-wrapper">
-            <IconNavLinkComponent imgSrc={IconTable.HOME} linkTo="home" />
+            <IconNavLinkComponent imgSrc={this.props.theme === "white-black" ? IconTable.HOME.BLACK : IconTable.HOME.WHITE} linkTo="home" />
           </div>
           <div className="short-cut-item-icon-wrapper">
-            <IconNavLinkComponent imgSrc={IconTable.PEOPLE} linkTo="home" />
+            <IconNavLinkComponent imgSrc={this.props.theme === "white-black" ? IconTable.PEOPLE.BLACK : IconTable.PEOPLE.WHITE} linkTo="home" />
           </div>
           <div className="short-cut-item-icon-wrapper">
-            <IconNavLinkComponent imgSrc={IconTable.LANGUAGE} linkTo="home" />
+            <IconNavLinkComponent imgSrc={this.props.theme === "white-black" ? IconTable.LANGUAGE.BLACK : IconTable.LANGUAGE.WHITE} linkTo="home" />
           </div>
         </div>
       </div>
