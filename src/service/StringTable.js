@@ -24,6 +24,10 @@ export const StringTable = {
 }
 
 export const IconTable = {
+  MENU: {
+    WHITE: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fionic-md-menu.png?alt=media&token=12b52938-a86c-42a6-9234-2c603e76af86'
+    , BLACK: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fblack%2Fionic-md-menu-black.png?alt=media&token=59799b34-3bd2-43d5-9038-6000b2c7a35a'
+  },
   HOME: {
     WHITE: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fionic-md-home.png?alt=media&token=fe33958e-9c18-4cd9-82d1-5b51fea61b88'
     , BLACK: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fblack%2Fionic-md-home-black.png?alt=media&token=05a80099-c382-4594-ac7c-23c185e042de'

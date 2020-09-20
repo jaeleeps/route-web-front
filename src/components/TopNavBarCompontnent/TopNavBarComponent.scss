@@ -44,17 +44,38 @@
     }
   }
 
-  > .short-cut-items-wrapper {
+
+  > .top-nav-bar-right-wrapper {
     display: flex;
     justify-self: flex-end;
-    justify-content: space-between;
     align-items: center;
-    width: 17.2rem;
 
-    > .short-cut-item-icon-wrapper {
-      width: 1.6rem;
-      height: 1.6rem;
-      text-align: center;
+    > .short-cut-items-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 17.2rem;
+  
+      > .short-cut-item-icon-wrapper {
+        width: 1.6rem;
+        height: 1.6rem;
+        text-align: center;
+      }
     }
+
+    > .short-cut-menu-icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      > .menu-icon-wrapper {
+        width: 2.7rem;
+        height: 2.7rem;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+
   }
+
 }

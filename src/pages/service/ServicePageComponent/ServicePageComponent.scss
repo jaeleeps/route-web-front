@@ -1,15 +1,15 @@
-.about-page-component-wrapper {
+.service-page-component-wrapper {
   color: #ffffff;
   position: relative;
 
 
 
-  > .about-page-main-content-wrapper {
+  > .service-page-main-content-wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 
-    > .about-page-img-banner-wrapper {
+    > .service-page-img-banner-wrapper {
       width: 100%;
       height: 12rem;
       background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500');
@@ -17,7 +17,7 @@
       background-size: cover;
     }
 
-    > .about-page-main-content-inner-wrapper {
+    > .service-page-main-content-inner-wrapper {
       display: flex;
       flex-grow: 1;
 
@@ -26,7 +26,7 @@
 
       padding: 4.6rem 0;
 
-      > .about-content-wrapper {
+      > .service-content-wrapper {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -49,7 +49,7 @@
             font-size: 2.4rem;
             font-weight: 900;
             letter-spacing: 4.8px;
-            color: #707070;
+            color: #000000;
 
             white-space: nowrap;
           }
@@ -62,7 +62,7 @@
             margin-left: 1rem;
             height: 0.2rem;
 
-            background-color: #707070;
+            background-color: #000000;
           }
 
         }
@@ -78,7 +78,7 @@
           background-size: contain;
         }
 
-        > .about-text-wrapper {
+        > .service-text-wrapper {
 
           > .paragraph-wrapper {
             &:not(:last-child) {
@@ -87,7 +87,7 @@
 
             text-align: left;
             font-size: 1.6rem;
-            color: #707070;
+            color: #000000;
 
             > .highlight {
               font-weight: 900;
@@ -97,7 +97,7 @@
         }
 
       }
-      // about-content-wrapper
+      // service-content-wrapper
 
     }
   }

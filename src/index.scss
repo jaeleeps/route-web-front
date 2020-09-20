@@ -46,6 +46,25 @@ code {
 //   }
 // }
 
+@media all and (min-width: 320px) {
+  .responsive-handler-wrapper {
+    max-width: 32.0rem;
+  }
+}
+
+@media all and (min-width: 360px) {
+  .responsive-handler-wrapper { 
+    max-width: 36.0rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .responsive-handler-wrapper {
+    max-width: 76.8rem;
+  }
+}
+
+
 #root {
   min-width: 100vw;
   min-height: 100vh;
