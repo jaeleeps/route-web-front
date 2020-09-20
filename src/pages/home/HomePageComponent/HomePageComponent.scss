@@ -49,6 +49,36 @@
         align-items: center;
         justify-items: center;
 
+        &.web {
+          > .logo-img-wrapper {
+            width: 24rem;
+            height: 14rem;
+          }
+          > .title-text-wrapper {
+            margin: 2.6rem 0;
+            font-size: 5.5rem;
+            letter-spacing: 1.08rem;
+          }
+          > .subtitle-text-wrapper {
+            font-size: 1.7rem;
+          }
+        }
+
+        &.mobile {
+          > .logo-img-wrapper {
+            width: 16rem;
+            height: 9.2rem;
+          }
+          > .title-text-wrapper {
+            margin: 1.6rem 0;
+            font-size: 3.7rem;
+            letter-spacing: 0.72rem;
+          }
+          > .subtitle-text-wrapper {
+            font-size: 1.2rem;
+          }
+        }
+
         > .logo-img-wrapper {
           width: 24rem;
           height: 14rem;
@@ -75,7 +105,6 @@
           font-family: 'Libre Baskerville', serif;
           color: #FFFFFF;
         }
-
       }
 
     }

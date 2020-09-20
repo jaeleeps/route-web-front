@@ -18,7 +18,7 @@ class ServicePageComponent extends Component {
             <div className="service-content-wrapper responsive-handler-wrapper">
 
               <div className="title-wrapper">
-                <div className="title-text">MEMBERS</div>
+                <div className="title-text">SERVICE</div>
                 <div className="title-line"></div>
               </div>
 
