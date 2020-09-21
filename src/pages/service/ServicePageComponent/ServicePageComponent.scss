@@ -2,8 +2,6 @@
   color: #ffffff;
   position: relative;
 
-
-
   > .service-page-main-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,7 +10,7 @@
     > .service-page-img-banner-wrapper {
       width: 100%;
       height: 12rem;
-      background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500');
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500");
       background-position: center center;
       background-size: cover;
     }
@@ -34,11 +32,11 @@
         align-items: center;
         justify-content: center;
 
-        padding: 2.0rem;
+        padding: 2rem;
 
         > .title-wrapper {
           display: flex;
-  
+
           align-items: center;
           justify-content: flex-start;
 
@@ -64,46 +62,121 @@
 
             background-color: #000000;
           }
-
         }
 
-        > .logo-wrapper {
-          width: 12rem;
-          height: 7rem;
+        > .desc-color-wrapper {
+          width: 100%;
+          height: 12rem;
+          background-color: #000000;
+          margin: 2rem 0;
+          padding: 2.4rem;
 
-          margin: 4.6rem 0;
-
-          background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
-          background-position: center center;
-          background-size: contain;
-        }
-
-        > .service-text-wrapper {
-
-          > .paragraph-wrapper {
-            &:not(:last-child) {
-              margin-bottom: 3.2rem;
-            }
-
+          > .text-wrapper {
             text-align: left;
-            font-size: 1.6rem;
-            color: #000000;
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: 0.48rem;
+            color: #eeeeee;
 
-            > .highlight {
-              font-weight: 900;
-              letter-spacing: 0.28rem;
-            }
+            width: 100%;
+            height: 100%;
+            border-right: 0.2rem solid #eeeeee;
           }
         }
 
+        // > .logo-wrapper {
+        //   width: 12rem;
+        //   height: 7rem;
+
+        //   margin: 4.6rem 0;
+
+        //   background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+        //   background-position: center center;
+        //   background-size: contain;
+        // }
+
+        > .service-text-wrapper {
+          width: 100%;
+
+          > .service-card-wrapper {
+            color: #000;
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) {
+              margin-bottom: 2.0rem;
+            }
+            > .card-title-wrapper {
+              display: flex;
+              align-items: center;
+              padding: 1rem;
+              background-color: #000000;
+              > .title-text {
+                color: #ffffff;
+                font-size: 1.6rem;
+                font-weight: 900;
+              }
+              > .title-line {
+                flex-grow: 1;
+                height: 0.2rem;
+                margin-left: 0.5rem;
+                background-color: #ffffff;
+              }
+            }
+
+            > .card-content-wrapper {
+              padding: 2rem 1.8rem;
+              > .paragraph {
+                > div {
+                  font-size:  1.5rem;
+                  font-weight: 300;
+                  line-height: 2.2rem;
+                  color: #707070;
+
+                  &:not(:last-child) {
+                    margin-bottom: 1.4rem;
+                  }
+                }
+              }
+              > .subtitle {
+                margin: 1.2rem 0;
+                margin-top: 2.4rem;
+                > div {
+                  font-size: 1.7rem;
+                  font-weight: 700;
+                  font-family: "Roboto", sans-serif;
+                }
+              }
+              > .block-wrapper {
+                padding: 0.2rem;
+                font-family: "Roboto", sans-serif;
+                > .block-item {
+                  padding: 1.2rem 1.6rem;
+                  color: #ffffff;
+                  background-color: #000000;
+                  border-radius: 0.8rem;
+
+                  text-align: left;
+                  &:not(:last-child) {
+                    margin-bottom: 0.8rem;
+                  }
+                  > .block-title {
+                    font-size: 1.6rem;
+                    font-weight: 900;
+                    margin-bottom: 0.8rem;
+                  }
+                  > .block-description {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+            //.card-content-wrapper
+          }
+        }
       }
       // service-content-wrapper
-
     }
   }
 }
-
-
-
-
-
