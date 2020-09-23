@@ -62,9 +62,13 @@
 
             background-color: #000000;
           }
+
         }
 
         > .desc-color-wrapper {
+          display: flex;
+          justify-content: space-between;
+
           width: 100%;
           height: 12rem;
           background-color: #000000;
@@ -73,14 +77,23 @@
 
           > .text-wrapper {
             text-align: left;
-            font-size: 2.4rem;
+            font-size: 1.6rem;
             font-weight: 900;
             letter-spacing: 0.48rem;
             color: #eeeeee;
 
             width: 100%;
             height: 100%;
-            border-right: 0.2rem solid #eeeeee;
+            // border-right: 0.2rem solid #eeeeee;
+          }
+
+          > .desc-log-wrapper {
+            width: 4rem;
+            height: 2.4rem;
+            align-self: flex-end;
+            background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+            background-position: center center;
+            background-size: contain;
           }
         }
 
@@ -102,6 +115,7 @@
             color: #000;
             display: flex;
             flex-direction: column;
+            border-radius: 0.8rem;
 
             &:not(:last-child) {
               margin-bottom: 2.0rem;
@@ -109,8 +123,9 @@
             > .card-title-wrapper {
               display: flex;
               align-items: center;
-              padding: 1rem;
+              padding: 1.2rem;
               background-color: #000000;
+              border-radius: 0.8rem 0.8rem 0 0;
               > .title-text {
                 color: #ffffff;
                 font-size: 1.6rem;
@@ -118,9 +133,10 @@
               }
               > .title-line {
                 flex-grow: 1;
-                height: 0.2rem;
-                margin-left: 0.5rem;
-                background-color: #ffffff;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                margin-left: 0.8rem;
+                background-color: #92D050;
               }
             }
 
@@ -150,25 +166,39 @@
               > .block-wrapper {
                 padding: 0.2rem;
                 font-family: "Roboto", sans-serif;
-                > .block-item {
-                  padding: 1.2rem 1.6rem;
-                  color: #ffffff;
-                  background-color: #000000;
-                  border-radius: 0.8rem;
 
-                  text-align: left;
+                > .block-item {
+                  display: flex;
+                  border-radius: 0.8rem;
                   &:not(:last-child) {
-                    margin-bottom: 0.8rem;
+                    margin-bottom: 1.2rem;
                   }
-                  > .block-title {
-                    font-size: 1.6rem;
-                    font-weight: 900;
-                    margin-bottom: 0.8rem;
+                  > .block-inner-left-wrapper {
+                    // flex-grow: 1;
+                    width: 0.8rem !important;
+                    height: inherit;
+                    // background-color: #92D050;
+                    border-radius: 0.8rem 0 0 0.8rem;
                   }
-                  > .block-description {
-                    font-size: 1.3rem;
-                    font-weight: 500;
+  
+                  > .block-inner-right-wrapper {
+                    padding: 1.2rem 1.6rem;
+                    color: #000000;
+                    border-radius: 0 0.8rem 0.8rem 0;
+                    background-color: #ffffff;
+                    text-align: left;
+
+                    > .block-title {
+                      font-size: 1.6rem;
+                      font-weight: 900;
+                      margin-bottom: 0.8rem;
+                    }
+                    > .block-description {
+                      font-size: 1.3rem;
+                      font-weight: 500;
+                    }
                   }
+
                 }
               }
             }

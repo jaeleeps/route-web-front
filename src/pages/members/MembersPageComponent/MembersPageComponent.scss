@@ -2,8 +2,6 @@
   color: #ffffff;
   position: relative;
 
-
-
   > .members-page-main-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -103,7 +101,38 @@
   }
 }
 
+.team-select-button {
+  color: #000000;
+}
 
+.members-card-item {
+  color: #000000;
 
+  
+  border-radius: 0.8rem;
 
+  > .card-main-content {
 
+    display: flex;
+    
+
+    > .main-content-left-wrapper {
+      padding: 1.2rem;
+
+      > .profile-img-wrapper {
+        width: 9.6rem;
+        height: 9.6rem;
+        background-position: center center;
+        background-size: cover;
+
+        border-radius: 4.8rem;
+        border-style: solid;
+      }
+    }
+
+    > .main-content-right-wrapper {
+      padding: 1.2rem;
+    }
+
+  }
+}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { TopNavBarComponent } from "../../../components/TopNavBarCompontnent/TopNavBarComponent";
 import { BottomFooterComponent } from "../../../components/BottomFooterComponent/BottomFooterComponent";
 import { StringTable } from "../../../service/StringTable";
+import { ImageTable } from "../../../service/ImageTable";
 import "./ServicePageComponent.scss";
 
 class ServicePageComponent extends Component {
@@ -28,9 +29,12 @@ class ServicePageComponent extends Component {
             const blockItems = cardContent.items.map((item) => {
               const descriprions = item.descriptions.map((desc) => (<div className="block-description">{desc}</div>));
               return (
-                <div className="block-item">
-                  <div className="block-title">{item.title}</div>
-                  {descriprions}
+                <div className="block-item shadow-2">
+                  <div className="block-inner-left-wrapper" style={{backgroundColor:`${item.color}`}}></div>
+                  <div className="block-inner-right-wrapper">
+                    <div className="block-title">{item.title}</div>
+                    {descriprions}
+                  </div>
                 </div>
               )
             });
@@ -68,8 +72,8 @@ class ServicePageComponent extends Component {
 
               <div className="desc-color-wrapper">
                 <div className="text-wrapper">{StringTable.SERVICE.DESCRIPTION}</div>
+                <div className="desc-log-wrapper" style={{backgroundImage: `url(${ImageTable.LOGO})`}}></div>
               </div>
-
 
               <div className="service-text-wrapper">
                 {serviceContentItems}

@@ -2,7 +2,8 @@ import React from "react";
 import { NavLink, Redirect } from "react-router-dom";
 
 import { IconNavLinkComponent } from "../IconNavLinkComponent/IconNavLinkComponent";
-import { IconTable, ImageTable } from "../../service/StringTable";
+import { IconTable } from "../../service/IconTable";
+import { ImageTable } from "../../service/ImageTable";
 
 import "./TopNavBarComponent.scss";
 

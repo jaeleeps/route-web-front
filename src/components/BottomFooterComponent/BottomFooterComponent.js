@@ -1,6 +1,6 @@
 import React from "react";
 import { IconNavLinkComponent } from "../IconNavLinkComponent/IconNavLinkComponent";
-import { IconTable } from "../../service/StringTable";
+import { IconTable } from "../../service/IconTable";
 import "./BottomFooterComponent.scss";
 export class BottomFooterComponent extends React.Component {
 

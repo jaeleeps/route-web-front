@@ -6,6 +6,12 @@ import "./CareerPageComponent.scss";
 
 class CareerPageComponent extends Component {
   render() {
+    const paragraphs = StringTable.ABOUT.MAIN.PARAGRAPHS.map((para) => (
+      <div className="paragraph-wrapper">
+        <span className="highlight" style={{color: para.highlight_color}}>{para.HIGHLIGHT}</span>
+        <span className="normal">{para.NORMAL}</span>
+      </div>
+    ))
     return (
       <div className="career-page-component-wrapper page-component-wrapper">
         <div className="career-page-main-content-wrapper">
@@ -25,19 +31,8 @@ class CareerPageComponent extends Component {
               <div className="logo-wrapper"></div>
 
               <div className="career-text-wrapper">
-              <div className="paragraph-wrapper">
-                <span className="highlight">{StringTable.ABOUT.MAIN.PARAGRAPH_1.HIGHLIGHT}</span>
-                <span className="normal">{StringTable.ABOUT.MAIN.PARAGRAPH_1.NORMAL}</span>
+              {paragraphs}
               </div>
-              <div className="paragraph-wrapper">
-                <span className="highlight">{StringTable.ABOUT.MAIN.PARAGRAPH_2.HIGHLIGHT}</span>
-                <span className="normal">{StringTable.ABOUT.MAIN.PARAGRAPH_2.NORMAL}</span>
-              </div>
-              <div className="paragraph-wrapper">
-                <span className="highlight">{StringTable.ABOUT.MAIN.PARAGRAPH_3.HIGHLIGHT}</span>
-                <span className="normal">{StringTable.ABOUT.MAIN.PARAGRAPH_3.NORMAL}</span>
-              </div>
-            </div>
             </div>
           </div>
 
