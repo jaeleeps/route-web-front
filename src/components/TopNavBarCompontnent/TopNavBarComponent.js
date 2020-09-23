@@ -171,7 +171,7 @@ export class TopNavBarComponent extends React.Component {
                   ? IconTable.PEOPLE.BLACK
                   : IconTable.PEOPLE.WHITE
               }
-              linkTo="home"
+              linkTo="contact"
             />
           </div>
           <div className="short-cut-item-icon-wrapper">
