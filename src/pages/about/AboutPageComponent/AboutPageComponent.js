@@ -24,7 +24,7 @@ class AboutPageComponent extends Component {
             <div className="about-content-wrapper responsive-handler-wrapper">
 
               <div className="title-wrapper">
-                <div className="title-text">ABOUT US12</div>
+                <div className="title-text">ABOUT US516</div>
                 <div className="title-line"></div>
               </div>
 
