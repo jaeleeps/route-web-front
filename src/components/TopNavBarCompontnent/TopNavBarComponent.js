@@ -69,7 +69,7 @@ export class TopNavBarComponent extends React.Component {
                   linkTo="/home"
                 />
               </div>
-              <div className="title-wrapper">ROUTE</div>
+              <div className="title-wrapper"></div>
               <div className="subtitle-wrapper">
                 NONPROFIT CONSULTING ORGANIZATION
               </div>
