@@ -8,6 +8,30 @@ export const ImageTable = {
   PROFILE_IMAGE: {
     JAEYOUNG_LEE : {
       NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fjaeyoung_lee.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    MINJI_SONG : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fminji_song.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    HAYOON_JANG : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fhayoon_jang.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    CLARE_HA : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fclare_ha.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    STELLA_RIM : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fstella_rim.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    JEONGWHAN_LEE : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fjeongwhan_lee.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    SOOJI_KIM : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fsooji_kim.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    SOMIN_LEE : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fsomin_lee.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
+    },
+    HYEONA_CHOO : {
+      NORMAL: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/profile-image%2Fhyeona_choo.jpeg?alt=media&token=abc6503d-1672-41c5-96a3-89ad1df63591'
     }
   }
 }

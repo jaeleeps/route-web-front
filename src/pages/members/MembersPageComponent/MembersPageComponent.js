@@ -9,10 +9,30 @@ class MembersPageComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTeam:  "all",
+      selectedTeam: "all",
+      width: 0,
+      height: 0 
     }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      left: false,
+    });
+    console.log(this.state);
+  }
   
   onClickTeamSelectButton(buttonTitle) {
     console.log(buttonTitle);
@@ -23,7 +43,7 @@ class MembersPageComponent extends Component {
 
 
   render() {
-    let teamSelectButtons = ['all', 'startegy', 'finance', 'management'].map((item) => {
+    let teamSelectButtons = ['all', 'strategy', 'finance', 'management'].map((item) => {
       let buttonClass = this.state.selectedTeam === item
         ? `team-select-button selected`
         : `team-select-button`;
@@ -41,7 +61,7 @@ class MembersPageComponent extends Component {
         let bottomHandleIcon = card.selected ? IconTable.HOME.BLACK : IconTable.MENU.BLACK;
         let detailContentClass = card.selected ? "card-detail-content selected" : "card-detail-content";
         let postionItems = card.data.positions.map((positions) => (
-          <span className="position-item">{positions}</span>
+          <span className="position-item" style={{backgroundColor: card.color}}>{positions.toUpperCase()}</span>
         ));
 
         return(
@@ -56,6 +76,7 @@ class MembersPageComponent extends Component {
                 ></div>
               </div>
               <div className="main-content-right-wrapper">
+                <div className="logo-wrapper"></div>
                 <div className="name-wrapper">{card.data.name}</div>
                 <div className="university-wrapper">{card.data.university}</div>
                 <div className="major-wrapper">{card.data.major}</div>
@@ -76,6 +97,26 @@ class MembersPageComponent extends Component {
         )
       });
 
+    let responsiveFlexWrapper = this.state.width >= 1200
+      ? (
+        <div className="members-cards-wrapper">
+          <div className="memebers-cards-column">
+            {displayedMemberCards.filter((_, i) => i % 2 === 1)}
+          </div>
+          <div className="divider"></div>
+          <div className="memebers-cards-column">
+            {displayedMemberCards.filter((_, i) => i % 2 === 0)}
+          </div>
+        </div>
+      )
+      : (
+        <div className="members-cards-wrapper">
+          <div className="memebers-cards-column">
+            {displayedMemberCards}
+          </div>
+        </div>
+      );
+
     return (
       <div className="members-page-component-wrapper page-component-wrapper">
         <div className="members-page-main-content-wrapper">
@@ -95,10 +136,10 @@ class MembersPageComponent extends Component {
               <div className="members-select-button-wrapper">
                 {teamSelectButtons}
               </div>
-
-              <div className="members-cards-wrapper">
+              {responsiveFlexWrapper}
+              {/* <div className="members-cards-wrapper">
                 {displayedMemberCards}
-              </div>
+              </div> */}
             </div>
           </div>
 
