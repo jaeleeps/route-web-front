@@ -8,8 +8,19 @@ import "./ContactPageComponent.scss";
 class ContactPageComponent extends Component {
   render() {
     return (
-      <div className="contact-page-component-wrapper page-component-wrapper">
-        TEST
+      <div className="about-page-component-wrapper page-component-wrapper">
+        <div className="about-page-main-content-wrapper">
+          <TopNavBarComponent theme="white-black" />
+
+          <div className="about-page-img-banner-wrapper"></div>
+
+          <div className="about-page-main-content-inner-wrapper">
+            
+            <div className="test">adsfasdfdas </div>
+          </div>
+
+          <BottomFooterComponent theme="black-white" />
+        </div>
       </div>
     );
   }
