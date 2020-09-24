@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { TopNavBarComponent } from "../../../components/TopNavBarCompontnent/TopNavBarComponent";
+import { BottomFooterComponent } from "../../../components/BottomFooterComponent/BottomFooterComponent";
+import { StringTable } from "../../../service/StringTable";
+import { ImageTable } from "../../../service/ImageTable";
+import "./ServicePageComponent.scss";
 
 class ContactPageComponent extends Component {
   render() {
