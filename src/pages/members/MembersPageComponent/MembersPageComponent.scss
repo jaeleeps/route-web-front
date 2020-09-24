@@ -76,27 +76,24 @@
           background-size: contain;
         }
 
-        > .members-text-wrapper {
-
-          > .paragraph-wrapper {
-            &:not(:last-child) {
-              margin-bottom: 3.2rem;
-            }
-
-            text-align: left;
-            font-size: 1.6rem;
-            color: #000000;
-
-            > .highlight {
-              font-weight: 900;
-              letter-spacing: 0.28rem;
-            }
+        > .members-cards-wrapper {
+          display: flex;
+          width: 100%;
+          
+          > .divider {
+            width: 1.6rem;
+            height: 100%;
+          }
+  
+          > .memebers-cards-column {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
           }
         }
 
       }
       // members-content-wrapper
-
     }
   }
 }
@@ -107,8 +104,7 @@
 
 .members-card-item {
   color: #000000;
-
-  
+  margin-bottom: 1.6rem;
   border-radius: 0.8rem;
 
   > .card-main-content {
@@ -117,7 +113,8 @@
     
 
     > .main-content-left-wrapper {
-      padding: 1.2rem;
+      // padding: 1.2rem;
+      padding: 2.4rem;
 
       > .profile-img-wrapper {
         width: 9.6rem;
@@ -131,7 +128,63 @@
     }
 
     > .main-content-right-wrapper {
-      padding: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      
+      padding: 1.3rem;
+
+      > .logo-wrapper {
+        align-self: flex-end;
+
+        width: 2.9rem;
+        height: 1.7rem;
+
+        background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+        background-position: center center;
+        background-size: contain;
+      }
+
+      > .name-wrapper {
+        font-weight: 500;
+        font-size: 2.2rem;
+        font-family: "Roboto", sans-serif;
+
+        margin-bottom: 0.4rem;
+      }
+
+      > .university-wrapper {
+        font-size: 1.0rem;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 0.2rem;
+      }
+
+      > .major-wrapper {
+        font-size: 1.0rem;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 0.9rem;
+      }
+
+      > .position-items-wrapper {
+        display: flex;
+
+        > .position-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-right: 0.5rem;
+          }
+
+          height: 2.0rem;
+          border-radius: 1.0rem;
+          font-size: 1.0rem;
+          font-weight: 900;
+          color: #ffffff;
+          padding: 0.6rem 0.9rem;
+        }
+      }
     }
 
   }
