@@ -3,7 +3,7 @@ import { TopNavBarComponent } from "../../../components/TopNavBarCompontnent/Top
 import { BottomFooterComponent } from "../../../components/BottomFooterComponent/BottomFooterComponent";
 import { StringTable } from "../../../service/StringTable";
 import { ImageTable } from "../../../service/ImageTable";
-import "./ServicePageComponent.scss";
+import "./ContactPageComponent.scss";
 
 class ContactPageComponent extends Component {
   render() {
