@@ -2,8 +2,6 @@
   color: #ffffff;
   position: relative;
 
-
-
   > .about-page-main-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -12,7 +10,7 @@
     > .about-page-img-banner-wrapper {
       width: 100%;
       height: 12rem;
-      background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500');
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500");
       background-position: center center;
       background-size: cover;
     }
@@ -34,11 +32,11 @@
         align-items: center;
         justify-content: center;
 
-        padding: 2.0rem;
+        padding: 2rem;
 
         > .title-wrapper {
           display: flex;
-  
+
           align-items: center;
           justify-content: flex-start;
 
@@ -64,7 +62,6 @@
 
             background-color: #000000;
           }
-
         }
 
         > .logo-wrapper {
@@ -73,13 +70,42 @@
 
           margin: 4.6rem 0;
 
-          background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+          background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d");
           background-position: center center;
           background-size: contain;
         }
 
-        > .about-text-wrapper {
+        > .description-img-wrapper {
+          margin: 3.6rem 0 2.4rem 0;
 
+          .slide {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .carousel .control-prev.control-arrow:before {
+            border-right: 8px solid #000000;
+        }
+
+          .carousel .control-next.control-arrow:before {
+            border-left: 8px solid #000000;
+          }
+
+          .carousel-item {
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.4rem;
+            > .carousel-item-img {
+              max-width: 32rem;
+            }
+          }
+        }
+
+        > .about-text-wrapper {
           > .paragraph-wrapper {
             &:not(:last-child) {
               margin-bottom: 3.2rem;
@@ -95,15 +121,8 @@
             }
           }
         }
-
       }
       // about-content-wrapper
-
     }
   }
 }
-
-
-
-
-
