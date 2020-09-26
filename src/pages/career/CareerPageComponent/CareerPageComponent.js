@@ -15,7 +15,7 @@ class CareerPageComponent extends Component {
     return (
       <div className="career-page-component-wrapper page-component-wrapper">
         <div className="career-page-main-content-wrapper">
-          <TopNavBarComponent theme="white-black" />
+          <TopNavBarComponent theme="black-white" />
 
           <div className="career-page-img-banner-wrapper"></div>
 

@@ -18,4 +18,6 @@ export const IconTable = {
   , LINKEDIN: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fawesome-linkedin.png?alt=media&token=53646308-1c04-44ed-9a2e-7cde32277c1a'
   , INSTAGRAM: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fsimple-instagram.png?alt=media&token=ea1e2861-e510-4088-bcdb-011efefaf8d9'
   , FACEBOOK: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fmetro-facebook.png?alt=media&token=56116084-f3ad-49ab-82b0-e36fd1b02090'
+  , CARET_UP_GRAY: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fgray%2Fawesome-caret-down.png?alt=media&token=5be8b955-247c-434d-8ba0-bcf61d81c7d1'
+  , CARET_DOWN_GRAY: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fgray%2Fawesome-caret-up.png?alt=media&token=1a9d85ed-692e-46da-924a-239201a82ee4'
 }

@@ -10,7 +10,7 @@
     > .members-page-img-banner-wrapper {
       width: 100%;
       height: 12rem;
-      background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500');
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/background%2Frain-background-2x.jpg?alt=media&token=1a9db55e-26b3-43d8-a962-0c06fa38c500");
       background-position: center center;
       background-size: cover;
     }
@@ -32,11 +32,11 @@
         align-items: center;
         justify-content: center;
 
-        padding: 2.0rem;
+        padding: 2rem;
 
         > .title-wrapper {
           display: flex;
-  
+
           align-items: center;
           justify-content: flex-start;
 
@@ -62,7 +62,6 @@
 
             background-color: #000000;
           }
-
         }
 
         > .logo-wrapper {
@@ -71,46 +70,57 @@
 
           margin: 4.6rem 0;
 
-          background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
+          background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d");
           background-position: center center;
           background-size: contain;
         }
 
         > .members-cards-wrapper {
           display: flex;
-          width: 100%;
-          
+          // width: 100%;
+
           > .divider {
             width: 1.6rem;
             height: 100%;
           }
-  
+
           > .memebers-cards-column {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
           }
         }
-
       }
       // members-content-wrapper
     }
   }
 }
 
-.team-select-button {
-  color: #000000;
+.members-select-button-wrapper {
+  display: flex;
+  max-width: 40.0rem;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  .team-select-button {
+    color: rgba($color: #000000, $alpha: 0.2);
+    font-size: 1.4rem;
+    &.selected {
+      color: rgba($color: #000000, $alpha: 1);
+      font-weight: 900;
+    }
+  }
 }
 
 .members-card-item {
+  width: 32.8rem;
   color: #000000;
-  margin-bottom: 1.6rem;
+  // margin-bottom: 1.6rem;
+  margin: 1.6rem;
   border-radius: 0.8rem;
 
   > .card-main-content {
-
     display: flex;
-    
 
     > .main-content-left-wrapper {
       // padding: 1.2rem;
@@ -128,64 +138,121 @@
     }
 
     > .main-content-right-wrapper {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      
-      padding: 1.3rem;
-
-      > .logo-wrapper {
-        align-self: flex-end;
-
-        width: 2.9rem;
-        height: 1.7rem;
-
-        background-image: url('https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d');
-        background-position: center center;
-        background-size: contain;
-      }
-
-      > .name-wrapper {
-        font-weight: 500;
-        font-size: 2.2rem;
-        font-family: "Roboto", sans-serif;
-
-        margin-bottom: 0.4rem;
-      }
-
-      > .university-wrapper {
-        font-size: 1.0rem;
-        font-family: "Roboto", sans-serif;
-        margin-bottom: 0.2rem;
-      }
-
-      > .major-wrapper {
-        font-size: 1.0rem;
-        font-family: "Roboto", sans-serif;
-        margin-bottom: 0.9rem;
-      }
-
-      > .position-items-wrapper {
+      > .main-content-right-inner-wrapper {
+        flex-grow: 1;
         display: flex;
+        flex-direction: column;
 
-        > .position-item {
+        padding: 1.3rem;
+
+        > .logo-wrapper {
+          align-self: flex-end;
+
+          width: 2.9rem;
+          height: 1.7rem;
+
+          background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/source%2Froute-logo-color.png?alt=media&token=8c9c5dec-acd3-4538-b1d2-013fdfdf490d");
+          background-position: center center;
+          background-size: contain;
+        }
+
+        > .name-wrapper {
+          font-weight: 500;
+          font-size: 2.2rem;
+          font-family: "Roboto", sans-serif;
+
+          margin-bottom: 0.4rem;
+        }
+
+        > .university-wrapper {
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          margin-bottom: 0.2rem;
+        }
+
+        > .major-wrapper {
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          margin-bottom: 0.9rem;
+        }
+
+        > .position-items-wrapper {
           display: flex;
-          justify-content: center;
-          align-items: center;
+          flex-wrap: wrap;
 
-          &:not(:last-child) {
-            margin-right: 0.5rem;
+          > .position-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // white-space: nowrap;
+
+            &:not(:last-child) {
+              margin-right: 0.5rem;
+              margin-bottom: 0.5rem;
+            }
+
+            min-height: 2rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            font-weight: 900;
+            color: #ffffff;
+            // padding: 0.6rem 0.9rem;
+            padding: 0.6rem 1rem;
           }
-
-          height: 2.0rem;
-          border-radius: 1.0rem;
-          font-size: 1.0rem;
-          font-weight: 900;
-          color: #ffffff;
-          padding: 0.6rem 0.9rem;
         }
       }
     }
-
+    // .main-content-right-wrapper
   }
+  // .card-main-content
+
+  > .card-detail-content {
+    display: none;
+
+    &.selected {
+      display: flex;
+      flex-direction: column;
+      padding: 1.4rem 3rem;
+
+      border-top: 0.2rem solid #f8f5f5;
+
+      > * > .title {
+        padding-bottom: 0.8rem;
+      }
+
+      > .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      > .career-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  // .card-detail-content
+
+  > .card-bottom-handle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.4rem;
+    border-radius: 0 0 0.8rem 0.8rem;
+    background-color: #f8f5f5;
+
+    > .card-bottom-handler-icon-wrapper {
+      width: 1.2rem;
+      height: 0.7rem;
+      background-image: url("https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fgray%2Fawesome-caret-up.png?alt=media&token=1a9d85ed-692e-46da-924a-239201a82ee4");
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+  // .card-bottom-handle
 }

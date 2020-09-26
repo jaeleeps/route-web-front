@@ -11,7 +11,8 @@ class MembersPageComponent extends Component {
     this.state = {
       selectedTeam: "all",
       width: 0,
-      height: 0 
+      height: 0,
+      cards: StringTable.MEMBERS.MAIN.CARDS
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -41,6 +42,23 @@ class MembersPageComponent extends Component {
     });
   }
 
+  toggleCardSelect(targetCard) {
+    console.log(targetCard);
+    this.setState({
+      ...this.state,
+      cards: this.state.cards.map((card) => 
+        card.data.name === targetCard.data.name 
+          ? {
+              ...card,
+              selected: !card.selected,
+            }
+          : card
+      )
+    });
+    
+    // card.selected = !card.selected;
+  }
+
 
   render() {
     let teamSelectButtons = ['all', 'strategy', 'finance', 'management'].map((item) => {
@@ -54,11 +72,11 @@ class MembersPageComponent extends Component {
       )
     })
 
-    let displayedMemberCards = StringTable.MEMBERS.MAIN.CARDS
+    let displayedMemberCards = this.state.cards
       .filter((card) => card.data.team.indexOf(this.state.selectedTeam) > -1)
       .map((card) => {
         
-        let bottomHandleIcon = card.selected ? IconTable.HOME.BLACK : IconTable.MENU.BLACK;
+        let bottomHandleIcon = card.selected ? IconTable.CARET_DOWN_GRAY : IconTable.CARET_UP_GRAY;
         let detailContentClass = card.selected ? "card-detail-content selected" : "card-detail-content";
         let postionItems = card.data.positions.map((positions) => (
           <span className="position-item" style={{backgroundColor: card.color}}>{positions.toUpperCase()}</span>
@@ -76,21 +94,32 @@ class MembersPageComponent extends Component {
                 ></div>
               </div>
               <div className="main-content-right-wrapper">
-                <div className="logo-wrapper"></div>
-                <div className="name-wrapper">{card.data.name}</div>
-                <div className="university-wrapper">{card.data.university}</div>
-                <div className="major-wrapper">{card.data.major}</div>
-                <div className="position-items-wrapper">{postionItems}</div>
+                <div className="main-content-right-inner-wrapper">
+                  <div className="logo-wrapper"></div>
+                  <div className="name-wrapper">{card.data.name}</div>
+                  <div className="university-wrapper">{card.data.university}</div>
+                  <div className="major-wrapper">{card.data.major}</div>
+                  <div className="position-items-wrapper">{postionItems}</div>
+                </div>
               </div>
             </div>
 
             <div className={detailContentClass}>
-              <div className="contact-wrapper"></div>
-              <div className="career-wrapper"></div>
+              <div className="contact-wrapper">
+                <div className="title">CONTACT</div>
+                <div className="content">
+                  <div className="email-wrapper">{card.data.contact.email}</div>
+                  <div className="mobile-wrapper">{card.data.contact.mobile}</div>
+                </div>
+              </div>
+              <div className="career-wrapper">
+                <div className="title">CAREER</div>
+              </div>
             </div>
 
-            <div className="card-bottom-handle">
-              <div className="card-bottom-handler-icon-wrapper" style={{backgroundImage:`url(${bottomHandleIcon})`}}></div>
+            <div className="card-bottom-handle" onClick={() => this.toggleCardSelect(card)}>
+              <div className="card-bottom-handler-icon-wrapper" 
+                style={{backgroundImage:`url(${bottomHandleIcon})`}}></div>
             </div>
 
           </div>
@@ -111,16 +140,18 @@ class MembersPageComponent extends Component {
       )
       : (
         <div className="members-cards-wrapper">
+          <div className="divider"></div>
           <div className="memebers-cards-column">
             {displayedMemberCards}
           </div>
+          <div className="divider"></div>
         </div>
       );
 
     return (
       <div className="members-page-component-wrapper page-component-wrapper">
         <div className="members-page-main-content-wrapper">
-          <TopNavBarComponent theme="white-black" />
+          <TopNavBarComponent theme="black-white" />
 
           <div className="members-page-img-banner-wrapper"></div>
 

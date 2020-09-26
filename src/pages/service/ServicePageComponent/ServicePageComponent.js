@@ -59,7 +59,7 @@ class ServicePageComponent extends Component {
     return (
       <div className="service-page-component-wrapper page-component-wrapper">
         <div className="service-page-main-content-wrapper">
-          <TopNavBarComponent theme="white-black" />
+          <TopNavBarComponent theme="black-white" />
 
           <div className="service-page-img-banner-wrapper"></div>
 

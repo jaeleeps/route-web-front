@@ -131,8 +131,8 @@ export const StringTable = {
       CARDS: [
         // ST
         {
-          color: "#92D050",
-          selected: false,
+          color: "#24B0F0",
+          selected: true,
           data: {
             team: ["all", "strategy"],
             name: "Hayoon Jang",
@@ -151,8 +151,8 @@ export const StringTable = {
           },
         },
         {
-          color: "#92D050",
-          selected: false,
+          color: "#24B0F0",
+          selected: true,
           data: {
             team: ["all", "strategy"],
             name: "Minji Song",
@@ -171,8 +171,8 @@ export const StringTable = {
           },
         },
         {
-          color: "#92D050",
-          selected: false,
+          color: "#24B0F0",
+          selected: true,
           data: {
             team: ["all", "strategy"],
             name: "Clare Ha",
@@ -192,8 +192,8 @@ export const StringTable = {
         },
         // FINANCE
         {
-          color: "#92D050",
-          selected: false,
+          color: "#7030A0",
+          selected: true,
           data: {
             team: ["all", "finance"],
             name: "Stella Rim",
@@ -212,8 +212,8 @@ export const StringTable = {
           },
         },
         {
-          color: "#92D050",
-          selected이 : false,
+          color: "#7030A0",
+          selected: true,
           data: {
             team: ["all", "finance"],
             name: "Jeong Whan Lee",
@@ -233,8 +233,8 @@ export const StringTable = {
           },
         },
         {
-          color: "#92D050",
-          selected: false,
+          color: "#7030A0",
+          selected: true,
           data: {
             team: ["all", "finance"],
             name: "Soo Ji Kim",
@@ -256,7 +256,7 @@ export const StringTable = {
         // MANAGEMENT
         {
           color: "#92D050",
-          selected: false,
+          selected: true,
           data: {
             team: ["all", "management"],
             name: "Jaeyoung Lee",
@@ -276,7 +276,7 @@ export const StringTable = {
         },
         {
           color: "#92D050",
-          selected: false,
+          selected: true,
           data: {
             team: ["all", "management"],
             name: "Somin Lee",
@@ -296,7 +296,7 @@ export const StringTable = {
         },
         {
           color: "#92D050",
-          selected: false,
+          selected: true,
           data: {
             team: ["all", "management"],
             name: "Hyeon A Choo",

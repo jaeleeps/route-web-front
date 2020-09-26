@@ -10,7 +10,7 @@ class ContactPageComponent extends Component {
     return (
       <div className="about-page-component-wrapper page-component-wrapper">
         <div className="about-page-main-content-wrapper">
-          <TopNavBarComponent theme="white-black" />
+          <TopNavBarComponent theme="black-white" />
 
           <div className="about-page-img-banner-wrapper"></div>
 

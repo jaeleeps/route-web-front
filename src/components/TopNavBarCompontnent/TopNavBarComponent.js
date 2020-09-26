@@ -18,7 +18,8 @@ export class TopNavBarComponent extends React.Component {
   }
 
   static defaultProps = {
-    theme: "white-black",
+    // theme: "white-black",
+    theme: "black-white",
   };
 
   componentDidMount() {
@@ -214,7 +215,7 @@ export class TopNavBarComponent extends React.Component {
       >
         <div className="title-wrapper">
           <NavLink to={`/`} activeClassName="current">
-            ROUTE
+            {/* ROUTE */}
           </NavLink>
         </div>
 
