@@ -36,7 +36,7 @@ class HomePageComponent extends Component {
     return (
       <div className="home-page-component-wrapper page-component-wrapper">
         <div className="home-background-wrapper">
-          <video id="onboardingVideo" loop muted autoPlay playsInline>
+          <video id="onboardingVideo" loop muted autoPlay playsInline poster="src/assets/images/backgroud-video-poster.png">
             <source src={this.props.videoURL} type="video/mp4" />
           </video>
         </div>

@@ -107,7 +107,7 @@ export class TopNavBarComponent extends React.Component {
                   <div className="text-wrapper">MEMBERS</div>
                 </div>
               </NavLink>
-              <NavLink to={`/career`} activeClassName="current">
+              <NavLink to={`/projects`} activeClassName="current">
                 <div className="nav-item">
                   <div className="icon-wrapper">
                     <NextWeekIcon />
@@ -157,7 +157,7 @@ export class TopNavBarComponent extends React.Component {
             </NavLink>
           </div>
           <div className="nav-item">
-            <NavLink to={`/`} activeClassName="current">
+            <NavLink to={`/projects`} activeClassName="current">
               PROJECTS
             </NavLink>
           </div>

@@ -40,7 +40,7 @@ export const StringTable = {
       CARDS: [
         {
           TITLE: "MARKET RESEARCH",
-          LINE_COLOR: '#92D050',
+          LINE_COLOR: "#92D050",
           CONTENTS: [
             {
               type: "paragraph",
@@ -55,7 +55,7 @@ export const StringTable = {
 
         {
           TITLE: "DATA ANALYTICS",
-          LINE_COLOR: '#24B0F0',
+          LINE_COLOR: "#24B0F0",
           CONTENTS: [
             {
               type: "paragraph",
@@ -69,7 +69,7 @@ export const StringTable = {
 
         {
           TITLE: "STRATEGY RECOMMENDATION",
-          LINE_COLOR: '#7030A0',
+          LINE_COLOR: "#7030A0",
           CONTENTS: [
             {
               type: "paragraph",
@@ -130,15 +130,15 @@ export const StringTable = {
         },
 
         {
-          TITLE: "Project Conclusion",
+          TITLE: "PROJECT CONCLUSION",
           LINE_COLOR: "#92D050",
           CONTENTS: [
             {
               type: "paragraph",
               items: [
-                  'Upon finalization of the project, a set of deliverables are presented to you. In the process of finalizing solutions, we revise our solutions to reflect your feedback.'
-                  , 'We help with operational support, so that solutions can subsequently be implemented to your company.'
-              ]
+                "Upon finalization of the project, a set of deliverables are presented to you. In the process of finalizing solutions, we revise our solutions to reflect your feedback.",
+                "We help with operational support, so that solutions can subsequently be implemented to your company.",
+              ],
             },
             {
               type: "subtitle",
@@ -168,12 +168,9 @@ export const StringTable = {
                   color: "#92D050",
                 },
               ],
-            }
-          ]
-
+            },
+          ],
         },
-
-
       ],
     },
   },
@@ -241,7 +238,7 @@ export const StringTable = {
             career: [
               "KPMG Deal Advisory Intern",
               "BCG Research Analyst",
-              "CFA Level 1"
+              "CFA Level 1",
             ],
           },
         },
@@ -306,8 +303,7 @@ export const StringTable = {
           },
         },
         // FINANCE
-        
-        
+
         {
           color: "#24B0F0",
           selected: false,
@@ -327,7 +323,7 @@ export const StringTable = {
               "THE PLANET Producing Intern",
             ],
           },
-        },        
+        },
 
         // MANAGEMENT
         {
@@ -370,6 +366,39 @@ export const StringTable = {
               "Friends of MOFA Videographer",
             ],
           },
+        },
+      ],
+    },
+  },
+
+  PROJECTS: {
+    TITLE: "PROJECTS",
+    DESCRIPTION: "",
+    MAIN: {
+      PARAGRAPHS: [
+        {
+          type: "text",
+          contents: [
+            "ROUTE welcomes any clients who need a new perspective of review or advice on the management of their business. We pursue a partner-like relationship with our clients through active communication to solve problems and share new ideas.",
+          ],
+        },
+        {
+          type: "list",
+          contents: [
+            `Have you ever struggled with building market strategy?`,
+            `Wondering how to reduce cost and maximize profit?`,
+            `Have you ever failed targeting and reaching out to your customers through media? `,
+            `Do you need effective data analysis?`,
+            `Are you struggling with market entry?`,
+            `Do you need structured operational support?`,
+            `Do you want things to be “ROI positive.”?`,
+          ],
+        },
+        {
+          type: "text",
+          contents: [
+            "If any of these apply to your situation, contact us to be our partner and scale your business.",
+          ],
         },
       ],
     },
