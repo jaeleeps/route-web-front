@@ -40,6 +40,7 @@ export const StringTable = {
       CARDS: [
         {
           TITLE: "MARKET RESEARCH",
+          LINE_COLOR: '#92D050',
           CONTENTS: [
             {
               type: "paragraph",
@@ -54,6 +55,7 @@ export const StringTable = {
 
         {
           TITLE: "DATA ANALYTICS",
+          LINE_COLOR: '#24B0F0',
           CONTENTS: [
             {
               type: "paragraph",
@@ -67,6 +69,7 @@ export const StringTable = {
 
         {
           TITLE: "STRATEGY RECOMMENDATION",
+          LINE_COLOR: '#7030A0',
           CONTENTS: [
             {
               type: "paragraph",
@@ -83,6 +86,7 @@ export const StringTable = {
               items: [
                 {
                   title: "Building Market Strategy",
+                  type: "normal",
                   color: "#92D050",
                   descriptions: [
                     "Market Strategy Competitor analysis, funding models, and data collection",
@@ -91,6 +95,7 @@ export const StringTable = {
                 {
                   title: "Marketing and Reaching Customers through Media",
                   color: "#7030A0",
+                  type: "normal",
                   descriptions: [
                     "Social Media impact measurement, website and user experience design, general marketing strategy, and customer analytics",
                   ],
@@ -98,6 +103,7 @@ export const StringTable = {
                 {
                   title: "Market Entry and Expansion",
                   color: "#24B0F0",
+                  type: "normal",
                   descriptions: [
                     "Go-to-market strategy for new products and services, Expanding market for existing services",
                   ],
@@ -105,6 +111,7 @@ export const StringTable = {
                 {
                   title: "Operational Support",
                   color: "#92D050",
+                  type: "normal",
                   descriptions: [
                     "Supply chain strategy, cost reduction, business model transformation, and process optimization",
                   ],
@@ -112,6 +119,7 @@ export const StringTable = {
                 {
                   title: "Financial Analysis",
                   color: "#7030A0",
+                  type: "normal",
                   descriptions: [
                     "Analyzing financial statements and examining performance",
                   ],
@@ -120,6 +128,52 @@ export const StringTable = {
             },
           ],
         },
+
+        {
+          TITLE: "Project Conclusion",
+          LINE_COLOR: "#92D050",
+          CONTENTS: [
+            {
+              type: "paragraph",
+              items: [
+                  'Upon finalization of the project, a set of deliverables are presented to you. In the process of finalizing solutions, we revise our solutions to reflect your feedback.'
+                  , 'We help with operational support, so that solutions can subsequently be implemented to your company.'
+              ]
+            },
+            {
+              type: "subtitle",
+              items: [`Deliverables`],
+            },
+            {
+              type: "block",
+              items: [
+                {
+                  title: "Working Progress Report",
+                  type: "single",
+                  color: "#92D050",
+                },
+                {
+                  title: "Finalized Solution Report",
+                  type: "single",
+                  color: "#7030A0",
+                },
+                {
+                  title: "Additional Analysis",
+                  type: "single",
+                  color: "#24B0F0",
+                },
+                {
+                  title: "Revised Solution after feedback",
+                  type: "single",
+                  color: "#92D050",
+                },
+              ],
+            }
+          ]
+
+        },
+
+
       ],
     },
   },
@@ -161,8 +215,8 @@ export const StringTable = {
             major: "B.A. in Economics and Art History",
             positions: ["Vice President", "Auditor"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "stellar@uchicago.edu",
+              mobile: "010-7135-5898",
             },
             career: [
               "Seoul Art Space WATT Nonprofit Gallery Accountant Intern",
@@ -181,8 +235,8 @@ export const StringTable = {
             major: "B.A. in Economics w/ Data Science",
             positions: ["Head of Finance Team"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "zycon@uchicago.edu",
+              mobile: "010-5772-4411",
             },
             career: [
               "KPMG Deal Advisory Intern",
@@ -202,8 +256,8 @@ export const StringTable = {
             major: "B.S. in Computer Science",
             positions: ["Head of Management Team"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "jaeleeps@gmail.com",
+              mobile: "010-2309-4277",
             },
             career: [
               "GeroSalud Strategic Business Planning Intern",
@@ -222,8 +276,8 @@ export const StringTable = {
             major: "B.A. in Business, Chinese Studies",
             positions: ["Strategy Analyst"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "mjs9001@yonsei.ac.kr",
+              mobile: "010-3022-6315",
             },
             career: [
               "Finstep Asia Digital Marketing Intern",
@@ -242,8 +296,8 @@ export const StringTable = {
             major: "B.S. in Finance and Business Analytics",
             positions: ["Strategy Analyst"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "clare9923@gmail.com",
+              mobile: "010-4430-0796",
             },
             career: [
               "ACE I&M Investment Team Summer Analyst",
@@ -287,8 +341,8 @@ export const StringTable = {
             major: "B.A. in Sociology",
             positions: ["Social Media Manager"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "cindy99324@snu.ac.kr",
+              mobile: "010-7734-1617",
             },
             career: [
               "KSCY Conference Press Division Facilitator",
@@ -307,8 +361,8 @@ export const StringTable = {
             major: "B.A. in Media & Communication",
             positions: ["IT Manager"],
             contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
+              email: "5161114@naver.com",
+              mobile: "010-9602-8575",
             },
             career: [
               "Product Director of Korea University Television Systems KUTV",

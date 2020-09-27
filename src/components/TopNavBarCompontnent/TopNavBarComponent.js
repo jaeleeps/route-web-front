@@ -5,6 +5,13 @@ import { IconNavLinkComponent } from "../IconNavLinkComponent/IconNavLinkCompone
 import { IconTable } from "../../service/IconTable";
 import { ImageTable } from "../../service/ImageTable";
 
+import HomeIcon from '@material-ui/icons/Home';
+import InfoIcon from '@material-ui/icons/Info';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import NextWeekIcon from '@material-ui/icons/NextWeek';
+import LaptopChromebookIcon from '@material-ui/icons/LaptopChromebook';
+import ContactsIcon from '@material-ui/icons/Contacts';
+
 import "./TopNavBarComponent.scss";
 
 export class TopNavBarComponent extends React.Component {
@@ -78,37 +85,49 @@ export class TopNavBarComponent extends React.Component {
             <div className="nav-items-wrapper">
               <NavLink to={`/home`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
+                  <div className="icon-wrapper">
+                    <HomeIcon />
+                  </div>
                   <div className="text-wrapper">HOME</div>
                 </div>
               </NavLink>
               <NavLink to={`/about`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
+                  <div className="icon-wrapper">
+                    <InfoIcon />
+                  </div>
                   <div className="text-wrapper">ABOUT US</div>
                 </div>
               </NavLink>
               <NavLink to={`/members`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
+                  <div className="icon-wrapper">
+                    <SupervisedUserCircleIcon />
+                  </div>
                   <div className="text-wrapper">MEMBERS</div>
                 </div>
               </NavLink>
               <NavLink to={`/career`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
-                  <div className="text-wrapper">CAREER</div>
+                  <div className="icon-wrapper">
+                    <NextWeekIcon />
+                  </div>
+                  <div className="text-wrapper">PROJECTS</div>
                 </div>
               </NavLink>
               <NavLink to={`/service`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
+                  <div className="icon-wrapper">
+                    <LaptopChromebookIcon />
+                  </div>
                   <div className="text-wrapper">SERVICE</div>
                 </div>
               </NavLink>
               <NavLink to={`/contact`} activeClassName="current">
                 <div className="nav-item">
-                  <div className="icon-wrapper"></div>
+                  <div className="icon-wrapper">
+                    <ContactsIcon />
+                  </div>
                   <div className="text-wrapper">CONTACT</div>
                 </div>
               </NavLink>
@@ -139,7 +158,7 @@ export class TopNavBarComponent extends React.Component {
           </div>
           <div className="nav-item">
             <NavLink to={`/`} activeClassName="current">
-              CAREER
+              PROJECTS
             </NavLink>
           </div>
           <div className="nav-item">

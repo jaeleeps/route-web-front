@@ -146,7 +146,7 @@ class MembersPageComponent extends Component {
         )
       });
 
-    let responsiveFlexWrapper = this.state.width >= 1200
+    let responsiveFlexWrapper = this.state.width >= 720
       ? (
         <div className="members-cards-wrapper">
           <div className="memebers-cards-column">

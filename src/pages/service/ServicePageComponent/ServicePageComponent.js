@@ -6,8 +6,34 @@ import { ImageTable } from "../../../service/ImageTable";
 import "./ServicePageComponent.scss";
 
 class ServicePageComponent extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+      height: 0,
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
 
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      ...this.state,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+    console.log(this.state);
+  }
+
+  render() {
     const serviceContentItems = StringTable.SERVICE.MAIN.CARDS.map((cardData) => {
       const cardContent = cardData.CONTENTS.map((cardContent) => {
         switch (cardContent.type) {
@@ -27,13 +53,17 @@ class ServicePageComponent extends Component {
             break;
           case "block":
             const blockItems = cardContent.items.map((item) => {
-              const descriprions = item.descriptions.map((desc) => (<div className="block-description">{desc}</div>));
+              const descriprions = item.hasOwnProperty('descriptions') && item.descriptions.length > 0
+                ? item.descriptions.map((desc) => (<div className="block-description">{desc}</div>))
+                : null;
               return (
                 <div className="block-item shadow-2">
                   <div className="block-inner-left-wrapper" style={{backgroundColor:`${item.color}`}}></div>
                   <div className="block-inner-right-wrapper">
-                    <div className="block-title">{item.title}</div>
-                    {descriprions}
+                    <div className="block-inner-right-content-wrapper">
+                      <div className={`block-title ${item.type}`}>{item.title.toUpperCase()}</div>
+                      {descriprions}
+                    </div>
                   </div>
                 </div>
               )
@@ -47,14 +77,38 @@ class ServicePageComponent extends Component {
         }
       });
       return (
-        <div className="service-card-wrapper shadow-3">
-          <div className="card-title-wrapper shadow-1">
-            <div className="title-text">{cardData.TITLE}</div> <div className="title-line"></div>
+        <div className="service-text-wrapper">
+          <div className="service-card-wrapper shadow-3">
+            <div className="card-title-wrapper shadow-1">
+              <div className="title-text">{cardData.TITLE}</div> <div className="title-line" style={{backgroundColor:cardData.LINE_COLOR}}></div>
+            </div>
+            <div className="card-content-wrapper">{ cardContent }</div>
           </div>
-          <div className="card-content-wrapper">{ cardContent }</div>
         </div>
       );
     });
+
+    let responsiveFlexWrapper = this.state.width >= 720
+    ? (
+      <div className="service-cards-wrapper">
+        <div className="service-cards-column web">
+          {serviceContentItems.filter((_, i) => i % 2 === 0)}
+        </div>
+        <div className="divider"></div>
+        <div className="service-cards-column web">
+          {serviceContentItems.filter((_, i) => i % 2 === 1)}
+        </div>
+      </div>
+    )
+    : (
+      <div className="service-cards-wrapper">
+        <div className="divider"></div>
+        <div className="service-cards-column">
+          {serviceContentItems}
+        </div>
+        <div className="divider"></div>
+      </div>
+    );
 
     return (
       <div className="service-page-component-wrapper page-component-wrapper">
@@ -75,9 +129,11 @@ class ServicePageComponent extends Component {
                 <div className="desc-log-wrapper" style={{backgroundImage: `url(${ImageTable.LOGO})`}}></div>
               </div>
 
-              <div className="service-text-wrapper">
+              {/* <div className="service-text-wrapper">
                 {serviceContentItems}
-              </div>
+              </div> */}
+
+              {responsiveFlexWrapper}
 
             </div>
           </div>
