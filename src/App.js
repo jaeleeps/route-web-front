@@ -10,7 +10,7 @@ import AboutPageComponent from './pages/about/AboutPageComponent/AboutPageCompon
 import ContactPageComponent from './pages/contact/ContactPageComponent/ContactPageComponent';
 import MembersPageComponent from './pages/members/MembersPageComponent/MembersPageComponent';
 import ServicePageComponent from './pages/service/ServicePageComponent/ServicePageComponent';
-import CareerPageComponent from './pages/career/CareerPageComponent/CareerPageComponent';
+import ProjectsPageComponent from './pages/projects/ProjectsPageComponent/ProjectsPageComponent';
 
 import './App.css';
 import { Route } from 'react-router-dom';
@@ -20,11 +20,29 @@ function App() {
     <div className="App">
       {/* <MaterialTopNavBarComponent /> */}
       {/* <TopNavBarComponent /> */}
+      <Route 
+        path='/linkedin'
+        component={() => { 
+        window.location.href = "https://www.google.com";
+        return null;
+      }}/>
+      <Route 
+        path='/facebook'
+        component={() => { 
+        window.location.href = "https://www.google.com";
+        return null;
+      }}/>
+      <Route 
+        path='/instagram'
+        component={() => { 
+        window.location.href = "https://www.google.com";
+        return null;
+      }}/>
       <Route path="/" component={HomePageComponent} exact={true}></Route>
       <Route path="/home" component={HomePageComponent} exact={true}></Route>
       <Route path="/about" component={AboutPageComponent} exact={true}></Route>
       <Route path="/members" component={MembersPageComponent} exact={true}></Route>
-      <Route path="/career" component={CareerPageComponent} exact={true}></Route>
+      <Route path="/career" component={ProjectsPageComponent} exact={true}></Route>
       <Route path="/service" component={ServicePageComponent} exact={true}></Route>
       <Route path="/contact" component={ContactPageComponent} exact={true}></Route>
     </div>

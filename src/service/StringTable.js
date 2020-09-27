@@ -131,8 +131,8 @@ export const StringTable = {
       CARDS: [
         // ST
         {
-          color: "#24B0F0",
-          selected: true,
+          color: "#7030A0",
+          selected: false,
           data: {
             team: ["all", "strategy"],
             name: "Hayoon Jang",
@@ -152,48 +152,7 @@ export const StringTable = {
         },
         {
           color: "#24B0F0",
-          selected: true,
-          data: {
-            team: ["all", "strategy"],
-            name: "Minji Song",
-            profile_img_src: ImageTable.PROFILE_IMAGE.MINJI_SONG.NORMAL,
-            university: "Yonsei University",
-            major: "B.A. in Business, Chinese Studies",
-            positions: ["Strategy Analyst"],
-            contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
-            },
-            career: [
-              "Finstep Asia Digital Marketing Intern",
-              "Fiserv Project Consultant",
-            ],
-          },
-        },
-        {
-          color: "#24B0F0",
-          selected: true,
-          data: {
-            team: ["all", "strategy"],
-            name: "Clare Ha",
-            profile_img_src: ImageTable.PROFILE_IMAGE.CLARE_HA.NORMAL,
-            university: "The Wharton School",
-            major: "B.S. in Finance and Business Analytics",
-            positions: ["Strategy Analyst"],
-            contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
-            },
-            career: [
-              "ACE I&M Investment Team Summer Analyst",
-              "Gracewater Capital Investment Banking (M&A) Analyst",
-            ],
-          },
-        },
-        // FINANCE
-        {
-          color: "#7030A0",
-          selected: true,
+          selected: false,
           data: {
             team: ["all", "finance"],
             name: "Stella Rim",
@@ -212,8 +171,8 @@ export const StringTable = {
           },
         },
         {
-          color: "#7030A0",
-          selected: true,
+          color: "#24B0F0",
+          selected: false,
           data: {
             team: ["all", "finance"],
             name: "Jeong Whan Lee",
@@ -233,8 +192,71 @@ export const StringTable = {
           },
         },
         {
+          color: "#92D050",
+          selected: false,
+          data: {
+            team: ["all", "management"],
+            name: "Jaeyoung Lee",
+            profile_img_src: ImageTable.PROFILE_IMAGE.JAEYOUNG_LEE.NORMAL,
+            university: "Georgia Institute of Technology",
+            major: "B.S. in Computer Science",
+            positions: ["Head of Management Team"],
+            contact: {
+              email: "oylimpus@naver.com",
+              mobile: "010-4430-0796(+31 619952056)",
+            },
+            career: [
+              "GeroSalud Strategic Business Planning Intern",
+              "YOOWON Inc (Textile Machine Trading Agency) Sales Intern",
+            ],
+          },
+        },
+        {
           color: "#7030A0",
-          selected: true,
+          selected: false,
+          data: {
+            team: ["all", "strategy"],
+            name: "Minji Song",
+            profile_img_src: ImageTable.PROFILE_IMAGE.MINJI_SONG.NORMAL,
+            university: "Yonsei University",
+            major: "B.A. in Business, Chinese Studies",
+            positions: ["Strategy Analyst"],
+            contact: {
+              email: "oylimpus@naver.com",
+              mobile: "010-4430-0796(+31 619952056)",
+            },
+            career: [
+              "Finstep Asia Digital Marketing Intern",
+              "Fiserv Project Consultant",
+            ],
+          },
+        },
+        {
+          color: "#7030A0",
+          selected: false,
+          data: {
+            team: ["all", "strategy"],
+            name: "Clare Ha",
+            profile_img_src: ImageTable.PROFILE_IMAGE.CLARE_HA.NORMAL,
+            university: "The Wharton School",
+            major: "B.S. in Finance and Business Analytics",
+            positions: ["Strategy Analyst"],
+            contact: {
+              email: "oylimpus@naver.com",
+              mobile: "010-4430-0796(+31 619952056)",
+            },
+            career: [
+              "ACE I&M Investment Team Summer Analyst",
+              "Gracewater Capital Investment Banking (M&A) Analyst",
+            ],
+          },
+        },
+        // FINANCE
+        
+        
+        {
+          color: "#24B0F0",
+          selected: false,
           data: {
             team: ["all", "finance"],
             name: "Soo Ji Kim",
@@ -256,27 +278,7 @@ export const StringTable = {
         // MANAGEMENT
         {
           color: "#92D050",
-          selected: true,
-          data: {
-            team: ["all", "management"],
-            name: "Jaeyoung Lee",
-            profile_img_src: ImageTable.PROFILE_IMAGE.JAEYOUNG_LEE.NORMAL,
-            university: "Georgia Institute of Technology",
-            major: "B.S. in Computer Science",
-            positions: ["Head of Management Team"],
-            contact: {
-              email: "oylimpus@naver.com",
-              mobile: "010-4430-0796(+31 619952056)",
-            },
-            career: [
-              "GeroSalud Strategic Business Planning Intern",
-              "YOOWON Inc (Textile Machine Trading Agency) Sales Intern",
-            ],
-          },
-        },
-        {
-          color: "#92D050",
-          selected: true,
+          selected: false,
           data: {
             team: ["all", "management"],
             name: "Somin Lee",
@@ -296,7 +298,7 @@ export const StringTable = {
         },
         {
           color: "#92D050",
-          selected: true,
+          selected: false,
           data: {
             team: ["all", "management"],
             name: "Hyeon A Choo",

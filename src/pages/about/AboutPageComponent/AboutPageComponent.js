@@ -11,14 +11,27 @@ import { Carousel } from "react-responsive-carousel";
 
 class AboutPageComponent extends Component {
   render() {
-    const paragraphs = StringTable.ABOUT.MAIN.PARAGRAPHS.map((para) => (
-      <div className="paragraph-wrapper">
-        <span className="highlight" style={{ color: para.highlight_color }}>
-          {para.HIGHLIGHT}
-        </span>
-        <span className="normal">{para.NORMAL}</span>
-      </div>
-    ));
+    const paragraphs = StringTable.ABOUT.MAIN.PARAGRAPHS.map((para, index) => {
+      
+      const descriptionImage = index === 0
+        ? (
+          <div className="description-wrapper" style={{backgroundImage: `url(${ImageTable.ABOUT_MEANING_IMAGE.IMG_02})`}}></div>
+        )
+        : index === 1
+          ? <div className="description-wrapper" style={{backgroundImage: `url(${ImageTable.ABOUT_MEANING_IMAGE.IMG_01})`}}></div>
+          : null;
+
+      
+      return (
+        <div className="paragraph-wrapper">
+          <span className="highlight" style={{ color: para.highlight_color }}>
+            {para.HIGHLIGHT}
+          </span>
+          <span className="normal">{para.NORMAL}</span>
+          { descriptionImage }
+        </div>
+      )
+    });
     return (
       <div className="about-page-component-wrapper page-component-wrapper">
         <div className="about-page-main-content-wrapper">
@@ -33,9 +46,9 @@ class AboutPageComponent extends Component {
                 <div className="title-line"></div>
               </div>
 
-              {/* <div className="logo-wrapper"></div> */}
+              <div className="logo-wrapper"></div>
 
-              <div className="description-img-wrapper">
+              {/* <div className="description-img-wrapper">
                 <Carousel showArrows={true}>
                 <div className="carousel-item">
                     <img className="carousel-item-img" src={ImageTable.LOGO.COLOR} />
@@ -47,7 +60,7 @@ class AboutPageComponent extends Component {
                     <img className="carousel-item-img" src={ImageTable.ABOUT_MEANING_IMAGE.IMG_02} />
                   </div>
                 </Carousel>
-              </div>
+              </div> */}
 
               <div className="about-text-wrapper">{paragraphs}</div>
             </div>

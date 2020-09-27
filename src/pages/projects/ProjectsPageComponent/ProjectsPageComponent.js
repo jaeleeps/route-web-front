@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { TopNavBarComponent } from "../../../components/TopNavBarCompontnent/TopNavBarComponent";
 import { BottomFooterComponent } from "../../../components/BottomFooterComponent/BottomFooterComponent";
 import { StringTable } from "../../../service/StringTable";
-import "./CareerPageComponent.scss";
+import "./ProjectsPageComponent.scss";
 
-class CareerPageComponent extends Component {
+class ProjectsPageComponent extends Component {
   render() {
     const paragraphs = StringTable.ABOUT.MAIN.PARAGRAPHS.map((para) => (
       <div className="paragraph-wrapper">
@@ -42,4 +42,4 @@ class CareerPageComponent extends Component {
     );
   }
 }
-export default CareerPageComponent;
+export default ProjectsPageComponent;

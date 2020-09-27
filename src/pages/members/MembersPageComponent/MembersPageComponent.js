@@ -5,6 +5,12 @@ import { StringTable } from "../../../service/StringTable";
 import "./MembersPageComponent.scss";
 import { IconTable } from "../../../service/IconTable";
 
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+import EmailIcon from '@material-ui/icons/Email';
+import CallEndIcon from '@material-ui/icons/CallEnd';
+
 class MembersPageComponent extends Component {
   constructor(props) {
     super(props);
@@ -77,6 +83,9 @@ class MembersPageComponent extends Component {
       .map((card) => {
         
         let bottomHandleIcon = card.selected ? IconTable.CARET_DOWN_GRAY : IconTable.CARET_UP_GRAY;
+        let bottomHandlerMaterialIcon = card.selected 
+          ? <KeyboardArrowDownIcon />
+          : <KeyboardArrowUpIcon />;
         let detailContentClass = card.selected ? "card-detail-content selected" : "card-detail-content";
         let postionItems = card.data.positions.map((positions) => (
           <span className="position-item" style={{backgroundColor: card.color}}>{positions.toUpperCase()}</span>
@@ -108,18 +117,29 @@ class MembersPageComponent extends Component {
               <div className="contact-wrapper">
                 <div className="title">CONTACT</div>
                 <div className="content">
-                  <div className="email-wrapper">{card.data.contact.email}</div>
-                  <div className="mobile-wrapper">{card.data.contact.mobile}</div>
+                  <div className="email-wrapper contact-item" style={{borderColor:card.color}}>
+                    <EmailIcon style={{color:card.color}} />
+                    <div className="text">{card.data.contact.email}</div>
+                  </div>
+                  <div className="mobile-wrapper contact-item" style={{borderColor:card.color}}>
+                    <CallEndIcon style={{color:card.color}} />
+                    <div className="text">{card.data.contact.mobile}</div>
+                  </div>
                 </div>
               </div>
               <div className="career-wrapper">
                 <div className="title">CAREER</div>
+                <div className="career-content-wrapper">
+                {card.data.career.map((text) => (<div style={{borderLeft: `0.2rem solid ${card.color}`}}>{text}</div>))}
+                </div>
               </div>
             </div>
 
             <div className="card-bottom-handle" onClick={() => this.toggleCardSelect(card)}>
-              <div className="card-bottom-handler-icon-wrapper" 
-                style={{backgroundImage:`url(${bottomHandleIcon})`}}></div>
+              {/* <div className="card-bottom-handler-icon-wrapper" 
+                style={{backgroundImage:`url(${bottomHandleIcon})`}}>
+              </div> */}
+              {bottomHandlerMaterialIcon}
             </div>
 
           </div>
@@ -130,11 +150,11 @@ class MembersPageComponent extends Component {
       ? (
         <div className="members-cards-wrapper">
           <div className="memebers-cards-column">
-            {displayedMemberCards.filter((_, i) => i % 2 === 1)}
+            {displayedMemberCards.filter((_, i) => i % 2 === 0)}
           </div>
           <div className="divider"></div>
           <div className="memebers-cards-column">
-            {displayedMemberCards.filter((_, i) => i % 2 === 0)}
+            {displayedMemberCards.filter((_, i) => i % 2 === 1)}
           </div>
         </div>
       )
