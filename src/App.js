@@ -23,19 +23,19 @@ function App() {
       <Route 
         path='/linkedin'
         component={() => { 
-        window.location.href = "https://www.google.com";
+        window.location.href = "https://www.linkedin.com/company/route-consulting-group";
         return null;
       }}/>
       <Route 
         path='/facebook'
         component={() => { 
-        window.location.href = "https://www.google.com";
+        window.location.href = "https://www.facebook.com/Route-102109138324421/?ref=settings";
         return null;
       }}/>
       <Route 
         path='/instagram'
         component={() => { 
-        window.location.href = "https://www.google.com";
+        window.location.href = "https://instagram.com/route_consulting_group?igshid=mgml7n30cynp";
         return null;
       }}/>
       <Route path="/" component={HomePageComponent} exact={true}></Route>

@@ -403,4 +403,54 @@ export const StringTable = {
       ],
     },
   },
+
+  CONTACT: {
+    TITLE: "CONTACT",
+    DESCRIPTION: "",
+    MAIN: {
+      CARDS: [
+        {
+          color: "#0E76A8",
+          selected: false,
+          data: {
+            title: 'LinkedIn',
+            hasUrl: true,
+            hashNav: '/linkedin',
+            url: 'https://www.linkedin.com/company/route-consulting-group'
+          },
+        },
+        {
+          color: "#3B5998",
+          selected: false,
+          data: {
+            title: 'Facebook',
+            hasUrl: true,
+            hashNav: '/facebook',
+            url: 'https://www.facebook.com/Route-102109138324421/?ref=settings'
+          },
+        },
+        {
+          color: "#C32AA3",
+          selected: false,
+          data: {
+            title: 'Instagram',
+            hasUrl: true,
+            hashNav: '/instagram',
+            url: 'https://instagram.com/route_consulting_group?igshid=mgml7n30cynp'
+          },
+        },
+        {
+          color: "#92D050",
+          selected: false,
+          data: {
+            title: 'Email',
+            hasUrl: false,
+            hashNav: '',
+            url: '',
+            email: 'oylimpus@naver.com'
+          },
+        },
+      ],
+    },
+  },
 };
