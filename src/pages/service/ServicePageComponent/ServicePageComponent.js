@@ -5,12 +5,15 @@ import { StringTable } from "../../../service/StringTable";
 import { ImageTable } from "../../../service/ImageTable";
 import "./ServicePageComponent.scss";
 
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+
 class ServicePageComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       width: 0,
       height: 0,
+      showDownload: true,
     }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -127,6 +130,26 @@ class ServicePageComponent extends Component {
               <div className="desc-color-wrapper">
                 <div className="text-wrapper">{StringTable.SERVICE.DESCRIPTION}</div>
                 <div className="desc-log-wrapper" style={{backgroundImage: `url(${ImageTable.LOGO})`}}></div>
+                {/* <div></div> */}
+              </div>
+
+              <div className="download-wrapper shadow-2">
+                <div className="upper">
+                  <InsertDriveFileIcon style={{color:'#cfcfcf', fontSize:40}}/>
+                  {/* '#92D050' */}
+                  <span>DOWNLOAD BROCHURE</span>
+                </div>
+                <div className="lower">
+                  {/* <InsertDriveFileIcon style={{color:'#cfcfcf', fontSize:32}}/> */}
+                  <div className="lang-wrapper shadow-1">
+                    <a target="_blank" href='https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/file%2FBrochure_Eng.pdf?alt=media&token=65f85234-ee87-48cb-9fba-a4e91743351e' download>
+                      ENGLISH</a>
+                  </div>
+                  <div className="lang-wrapper shadow-1">
+                    <a target="_blank" href='https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/file%2FBrochure_Kor.pdf?alt=media&token=3949f2ca-e0be-4131-ad8e-95b1c0f8be4a' download>
+                      KOREAN</a>
+                  </div>
+                </div>
               </div>
 
               {/* <div className="service-text-wrapper">
