@@ -20,4 +20,12 @@ export const IconTable = {
   , FACEBOOK: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fmetro-facebook.png?alt=media&token=56116084-f3ad-49ab-82b0-e36fd1b02090'
   , CARET_UP_GRAY: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fgray%2Fawesome-caret-down.png?alt=media&token=5be8b955-247c-434d-8ba0-bcf61d81c7d1'
   , CARET_DOWN_GRAY: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fgray%2Fawesome-caret-up.png?alt=media&token=1a9d85ed-692e-46da-924a-239201a82ee4'
+
+  , KOREAN_NATIONAL_FLAG: {
+    COLOR: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fcolor%2Fsouth_korea_flag.svg?alt=media&token=0df46a9d-74e0-4f57-a714-bf75929284fc'
+  }
+
+  , USA_NATIONAL_FLAG: {
+    COLOR: 'https://firebasestorage.googleapis.com/v0/b/route2020-web.appspot.com/o/icon%2Fcolor%2Funited-states.svg?alt=media&token=a8d34e9f-f67f-4c5d-b146-f28459558a92'
+  }
 }
