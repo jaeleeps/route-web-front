@@ -1,4 +1,4 @@
-@import '../../../assets/animate.min.css';
+@import "../../../assets/animate.min.css";
 
 .members-page-component-wrapper {
   color: #ffffff;
@@ -142,6 +142,7 @@
     }
 
     > .main-content-right-wrapper {
+      flex-grow: 1;
       > .main-content-right-inner-wrapper {
         flex-grow: 1;
         display: flex;
@@ -189,12 +190,13 @@
             justify-content: center;
             align-items: center;
 
-            // white-space: nowrap;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
 
-            &:not(:last-child) {
-              margin-right: 0.5rem;
-              margin-bottom: 0.5rem;
-            }
+            // &:not(:last-child) {
+            //   margin-right: 0.5rem;
+            //   margin-bottom: 0.5rem;
+            // }
 
             min-height: 2rem;
             border-radius: 1rem;

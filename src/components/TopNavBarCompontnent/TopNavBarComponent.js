@@ -5,23 +5,23 @@ import { IconNavLinkComponent } from "../IconNavLinkComponent/IconNavLinkCompone
 import { IconTable } from "../../service/IconTable";
 import { ImageTable } from "../../service/ImageTable";
 
-import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
-import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import NextWeekIcon from '@material-ui/icons/NextWeek';
-import LaptopChromebookIcon from '@material-ui/icons/LaptopChromebook';
-import ContactsIcon from '@material-ui/icons/Contacts';
+import HomeIcon from "@material-ui/icons/Home";
+import InfoIcon from "@material-ui/icons/Info";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import NextWeekIcon from "@material-ui/icons/NextWeek";
+import LaptopChromebookIcon from "@material-ui/icons/LaptopChromebook";
+import ContactsIcon from "@material-ui/icons/Contacts";
 
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from "@material-ui/icons/Close";
 
 import "./TopNavBarComponent.scss";
 
-import LanguageIcon from '@material-ui/icons/Language';
+import LanguageIcon from "@material-ui/icons/Language";
 
 export class TopNavBarComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       width: 0,
       height: 0,
     };
@@ -62,25 +62,23 @@ export class TopNavBarComponent extends React.Component {
   }
 
   selectLanguage = (language) => {
-    console.log("sl",language)
-    localStorage.setItem(
-      "selected_language",
-      language
-    )
+    console.log("sl", language);
+    localStorage.setItem("selected_language", language);
     this.closeLanguageModal();
     // window.location = window.location;
     window.location.reload(false);
-  }
+  };
 
-  selectKorean = () => this.selectLanguage("korean")
-  selectEnglish = () => this.selectLanguage("english")
+  selectKorean = () => this.selectLanguage("korean");
+  selectEnglish = () => this.selectLanguage("english");
 
   toggleLanguageModal = () => {
+    console.log("122")
     this.setState((prevState) => ({
       ...prevState,
-      showLangugeModal: !prevState.left,
+      showLangugeModal: !prevState.showLangugeModal,
     }));
-    console.log(this.state)
+    console.log(this.state);
   };
 
   closeLanguageModal = () => {
@@ -113,26 +111,46 @@ export class TopNavBarComponent extends React.Component {
 
     if (this.state.showLangugeModal) {
       LanguageModal = (
-        <div className="menu-language-modal-wrapper" 
+        <div
+          className="menu-language-modal-wrapper"
           // onClick={() => this.closeLanguageModal()}
         >
           <div className="menu-language-modal-content-wrapper shadow-3">
-            <CloseIcon className="close-button" onClick={() => this.closeLanguageModal()}/>
+            <CloseIcon
+              className="close-button"
+              onClick={() => this.closeLanguageModal()}
+            />
             <div className="title-wrapper">
-              <LanguageIcon className="language-icon"/>
+              <LanguageIcon className="language-icon" />
               <div className="title-text"> SELECT LANGUAGE </div>
             </div>
             <div className="language-buttons-wrapper">
-              <div className="language-button-item shadow-2" onClick={() => this.selectEnglish()}>
-                <div className="usa national-flag-icon-wrapper"></div><div className="text">ENG</div>
+              <div
+                className={`language-button-item ${
+                  localStorage.getItem("selected_language") !== "korean"
+                    ? "selected"
+                    : ""
+                }`}
+                onClick={() => this.selectEnglish()}
+              >
+                <div className="usa national-flag-icon-wrapper"></div>
+                <div className="text">ENG</div>
               </div>
-              <div className="language-button-item shadow-2" onClick={() => this.selectKorean()}>
-              <div className="korea national-flag-icon-wrapper"></div><div className="text">한국어</div>
+              <div
+                className={`language-button-item ${
+                  localStorage.getItem("selected_language") === "korean"
+                    ? "selected"
+                    : ""
+                }`}
+                onClick={() => this.selectKorean()}
+              >
+                <div className="korea national-flag-icon-wrapper"></div>
+                <div className="text">한국어</div>
               </div>
             </div>
           </div>
         </div>
-      )
+      );
     } else {
       LanguageModal = null;
     }
@@ -155,6 +173,9 @@ export class TopNavBarComponent extends React.Component {
                 NONPROFIT CONSULTING ORGANIZATION
               </div>
             </div>
+
+            <div className="divider"></div>
+
             <div className="nav-items-wrapper">
               <NavLink to={`/home`} activeClassName="current">
                 <div className="nav-item">
@@ -204,6 +225,17 @@ export class TopNavBarComponent extends React.Component {
                   <div className="text-wrapper">CONTACT</div>
                 </div>
               </NavLink>
+            </div>
+
+            <div className="divider"></div>
+
+            <div className="tools-wrapper">
+              <div className="nav-item" onClick={() => this.toggleLanguageModal()}>
+                <div className="icon-wrapper">
+                  <LanguageIcon />
+                </div>
+                <div className="text-wrapper">SELECT LANGUAGE</div>
+              </div>
             </div>
           </div>
           <div
@@ -278,8 +310,7 @@ export class TopNavBarComponent extends React.Component {
               linkTo="home"
             /> */}
 
-            <LanguageIcon onClick={() => this.toggleLanguageModal()}/>
-            
+            <LanguageIcon onClick={() => this.toggleLanguageModal()} />
           </div>
         </div>
       );
@@ -296,7 +327,7 @@ export class TopNavBarComponent extends React.Component {
                   : IconTable.MENU.WHITE
               })`,
             }}
-            // onClick={this.toggleMenuSideNav}
+            onClick={this.toggleMenuSideNav}
           ></div>
         </div>
       );

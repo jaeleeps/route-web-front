@@ -111,9 +111,15 @@
     display: flex;
     flex-direction: column;
 
+    > .divider {
+      width: 100%;
+      height: 0.1rem;
+      background-color: #0000001a;
+      // border-bottom: 0.2rem solid #0000001a;
+    }
+
     > .intro-wrapper {
       padding: 2rem 1.6rem;
-      border-bottom: 0.2rem solid #0000001a;
       > .logo-wrapper {
       }
       > .title-wrapper {
@@ -154,6 +160,31 @@
         }
       }
     }
+
+    > .tools-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      > .nav-item {
+        display: flex;
+        align-items: center;
+        height: 4.8rem;
+
+        > .icon-wrapper {
+          margin: 0 2rem;
+          width: 1.8rem;
+          height: 1.8rem;
+          // background-color: red;
+        }
+        > .text-wrapper {
+          flex-grow: 1;
+          text-align: left;
+          font-size: 1.4rem;
+          letter-spacing: 0.35rem;
+        }
+      }
+    }
+
   }
   > .menu-side-nav-background-wrapper {
     flex-grow: 1;
@@ -221,8 +252,13 @@
         width: 12.8rem;
         padding: 1.2rem;
         border-radius: 1.2rem;
+        border: 0.1rem solid #ececec;
         &:not(:last-child) {
           margin-right: 1.2rem;
+        }
+        &.selected {
+          background-color: #ececec;
+          border: 0.1rem solid #ececec;
         }
         > .national-flag-icon-wrapper {
           width: 2.4rem;
