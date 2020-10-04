@@ -201,7 +201,7 @@ export const EnglishStringTable = {
               mobile: "010-4430-0796(+31 619952056)",
             },
             career: [
-              "GeroSalud Strategic Business Planning Intern",
+              "GeroSalud Strategic Business Planning",
               "YOOWON Inc (Textile Machine Trading Agency) Sales Intern",
             ],
           },
@@ -262,8 +262,8 @@ export const EnglishStringTable = {
               mobile: "010-2309-4277",
             },
             career: [
-              "GeroSalud Strategic Business Planning Intern",
-              "YOOWON Inc (Textile Machine Trading Agency) Sales Intern",
+              "Naver D2 - CampusQ Student Developer",
+              "Jaranda Full-time Fullstack Developer",
             ],
           },
         },
@@ -317,7 +317,7 @@ export const EnglishStringTable = {
             name: "Soo Ji Kim",
             profile_img_src: ImageTable.PROFILE_IMAGE.SOOJI_KIM.NORMAL,
             university: "Korea University",
-            major: "B.A. in Business and Chinese Studies",
+            major: "B.A. in Business",
             positions: ["Auditor"],
             contact: {
               email: "cjsooji@naver.com",
@@ -339,7 +339,7 @@ export const EnglishStringTable = {
             name: "Somin Lee",
             profile_img_src: ImageTable.PROFILE_IMAGE.SOMIN_LEE.NORMAL,
             university: "Seoul National University",
-            major: "B.A. in Sociology",
+            major: "B.A. in Sociology and Chinese Studies",
             positions: ["Social Media Manager"],
             contact: {
               email: "cindy99324@snu.ac.kr",

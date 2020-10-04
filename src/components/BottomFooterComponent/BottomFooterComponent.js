@@ -57,7 +57,7 @@ export class BottomFooterComponent extends React.Component {
                   to={'/facebook'}
                   activeClassName="current"
                 >
-                  <InstagramIcon />
+                  <FacebookIcon />
                 </NavLink>
               </div>
               <div className="short-cut-items-wrapper">
@@ -67,7 +67,7 @@ export class BottomFooterComponent extends React.Component {
                   to={'/instagram'}
                   activeClassName="current"
                 >
-                  <FacebookIcon />
+                  <InstagramIcon />
                 </NavLink>
               </div>
             </div>
