@@ -109,7 +109,7 @@ export const KoreanStringTable = {
                   color: "#24B0F0",
                   type: "normal",
                   descriptions: [
-                    "로운 상품이나 서비스의 시장 진입, 기존 서비스의 확대 보급",
+                    "새로운 상품이나 서비스의 시장 진입, 기존 서비스의 확대 보급",
                   ],
                 },
                 {
@@ -271,7 +271,7 @@ export const KoreanStringTable = {
             team: ["all", "strategy"],
             name: "송민지",
             profile_img_src: ImageTable.PROFILE_IMAGE.MINJI_SONG.NORMAL,
-            university: "연세대학교",
+            university: "연세대학교",
             major: "중어중문학과 / 경영학과",
             positions: ["전략 컨설턴트"],
             contact: {

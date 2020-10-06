@@ -82,10 +82,10 @@ class MembersPageComponent extends Component {
       .filter((card) => card.data.team.indexOf(this.state.selectedTeam) > -1)
       .map((card) => {
         
-        let bottomHandleIcon = card.selected ? IconTable.CARET_DOWN_GRAY : IconTable.CARET_UP_GRAY;
+        // let bottomHandleIcon = card.selected ? IconTable.CARET_DOWN_GRAY : IconTable.CARET_UP_GRAY;
         let bottomHandlerMaterialIcon = card.selected 
-          ? <KeyboardArrowDownIcon />
-          : <KeyboardArrowUpIcon />;
+          ? <KeyboardArrowUpIcon />
+          : <KeyboardArrowDownIcon />;
         let detailContentClass = card.selected ? "card-detail-content selected" : "card-detail-content";
         let postionItems = card.data.positions.map((positions) => (
           <span className="position-item" style={{backgroundColor: card.color}}>{positions.toUpperCase()}</span>

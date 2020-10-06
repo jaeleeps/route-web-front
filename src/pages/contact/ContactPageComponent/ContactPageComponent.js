@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { NavLink } from "react-router-dom";
 import { TopNavBarComponent } from "../../../components/TopNavBarCompontnent/TopNavBarComponent";
 import { BottomFooterComponent } from "../../../components/BottomFooterComponent/BottomFooterComponent";
@@ -12,6 +13,8 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import EmailIcon from "@material-ui/icons/Email";
 
+const axios = require("axios");
+
 class ContactPageComponent extends Component {
   constructor(props) {
     super(props);
@@ -20,6 +23,8 @@ class ContactPageComponent extends Component {
       height: 0,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.sendReq = this.sendReq.bind(this);
+    this.resetFormField = this.resetFormField.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +45,35 @@ class ContactPageComponent extends Component {
     console.log(this.state);
   }
 
+  resetFormField() {
+    console.log(this.refs)
+    setImmediate(() => {
+      this.refs.NativeDom_NameTextarea.value = ''
+      this.refs.NativeDom_CompanyTextarea.value = ''
+      this.refs.NativeDom_MessageTextarea.value = ''
+      this.refs.NativeDom_MobileTextarea.value = ''
+      this.refs.NativeDom_EmailTextarea.value = ''
+    }, 1000)
+  }
+
+  sendReq() {
+    const requestHeader = { headers: { 'Content-Type': 'application/json' } };
+    const requestData = {
+      email: 'jaeleeps@gmail.com'
+    }
+    const requestUrl = 'http://localhost:3001/api/nodemailerTest';
+    axios.post(
+      requestUrl,
+      requestData,
+      requestHeader,
+    ).then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
   render() {
     let contactItems = StringTable.CONTACT.MAIN.CARDS.map((card) => {
       let contactIcon;
@@ -55,18 +89,18 @@ class ContactPageComponent extends Component {
       // }
       if (card.data.title === "LinkedIn") {
         contactIcon = (
-          <LinkedInIcon style={{ color: card.color, fontSize: 42 }} />
+          <LinkedInIcon style={{ color: "#000000", fontSize: 28 }} />
         );
       } else if (card.data.title === "Facebook") {
         contactIcon = (
-          <FacebookIcon style={{ color: card.color, fontSize: 42 }} />
+          <FacebookIcon style={{ color: "#000000", fontSize: 28 }} />
         );
       } else if (card.data.title === "Instagram") {
         contactIcon = (
-          <InstagramIcon style={{ color: card.color, fontSize: 42 }} />
+          <InstagramIcon style={{ color: "#000000", fontSize: 28 }} />
         );
       } else if (card.data.title === "Email") {
-        contactIcon = <EmailIcon style={{ color: card.color, fontSize: 42 }} />;
+        contactIcon = <EmailIcon style={{ color: "#000000", fontSize: 28 }} />;
       }
 
 
@@ -99,8 +133,11 @@ class ContactPageComponent extends Component {
 
       return (
         <div className="card-wrapper shadow-2">
-          <div className="icon-wrapper" style={{ borderColor: card.color }}>
+          {/* <div className="icon-wrapper" style={{ borderColor: card.color }}> */}
+          <div className="icon-wrapper">
             {contactIcon}
+            {/* <span className={`title ${this.state.width >= 720 ? '' : 'hide'}`}>{card.data.title.toUpperCase()}</span> */}
+            <span className={`title`}>{card.data.title.toUpperCase()}</span>
           </div>
           {bottomItem}
         </div>
@@ -110,12 +147,12 @@ class ContactPageComponent extends Component {
     let responsiveWrapper =
       this.state.width >= 720 ? (
         <div className="contact-text-wrapper">
-          <div className="row-wrapper">{contactItems}</div>
+          <div className="column-wrapper">{contactItems.slice(0, 2)}</div>
+          <div className="column-wrapper">{contactItems.slice(2, 4)}</div>
         </div>
       ) : (
         <div className="contact-text-wrapper">
-          <div className="row-wrapper">{contactItems.slice(0, 2)}</div>
-          <div className="row-wrapper">{contactItems.slice(2, 4)}</div>
+          <div className="column-wrapper">{contactItems}</div>
         </div>
       );
 
@@ -135,10 +172,70 @@ class ContactPageComponent extends Component {
 
               <div className="logo-wrapper"></div>
 
+              {/* <div style={{backgroundColor:'red'}} onClick={() => this.sendReq()}>send</div> */}
+
               {responsiveWrapper}
-              {/* <div className="contact-text-wrapper">
-                {contactItems}
-              </div> */}
+
+              <div className="title-wrapper last">
+                <div className="title-text">SEND EMAIL</div>
+                <div className="title-line"></div>
+              </div>
+
+              <form className="send-email-gform shadow-2" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbyhrMbA5F4tfbMlhRbojvLTCIEz6UujxMb6vzlKVuCiS6WFp1Dp/exec">
+
+                <div className="form-elements">
+                  {/* <!--text-field--> */}
+                  <div className="pure-group mobile-wrapper">
+                    <label htmlFor="text" className="title">NAME</label>
+                    {/* <input id="text" name="text" value="What your Mom calls you" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="name" ref="NativeDom_NameTextarea" name="name" rows="1" defaultValue="name"></textarea>
+                    </div>
+                  </div>
+
+                  <div className="pure-group mobile-wrapper">
+                    <label htmlFor="company" className="title">COMPANY</label>
+                    {/* <input id="text" name="text" value="What your Mom calls you" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="name" ref="NativeDom_CompanyTextarea" name="company" rows="1" defaultValue="010XXXXXXXX"></textarea>
+                    </div>
+                  </div>
+
+                  {/* <!--text-area--> */}
+                  <div className="pure-group message-wrapper">
+                    <label htmlFor="text-area" className="title">MESSAGE</label>
+                    <div className="textarea-wrapper">
+                      <textarea id="message" ref="NativeDom_MessageTextarea" name="message" rows="8" defaultValue="text"></textarea>
+                    </div>
+                  </div>
+
+                  <div className="pure-group mobile-wrapper">
+                    <label htmlFor="mobile" className="title">MOBILE</label>
+                    {/* <input id="text" name="text" value="What your Mom calls you" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="name" ref="NativeDom_MobileTextarea" name="mobile" rows="1" defaultValue="010XXXXXXXX"></textarea>
+                    </div>
+                  </div>
+
+                  {/* <!--email--> */}
+                  <div className="pure-group email-wrapper">
+                    <label htmlFor="email" className="title">EMAIL</label>
+                    {/* <input id="email" name="email" type="email" required value="your.name@email.com" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="email" ref="NativeDom_EmailTextarea" name="email" rows="1"></textarea>
+                    </div>
+                  </div>
+
+                  {/* <!--submit/button--> */}
+                  <button className="button-success pure-button button-xlarge" onClick={() => this.resetFormField()}>
+                    SEND
+                  </button>
+
+                </div>
+              </form>
+
+
+
             </div>
           </div>
 
