@@ -189,7 +189,7 @@ class ContactPageComponent extends Component {
                     <label htmlFor="text" className="title">NAME</label>
                     {/* <input id="text" name="text" value="What your Mom calls you" /> */}
                     <div className="textarea-wrapper">
-                      <textarea id="name" ref="NativeDom_NameTextarea" name="name" rows="1" defaultValue="name"></textarea>
+                      <textarea id="name" ref="NativeDom_NameTextarea" name="name" rows="1" defaultValue=""></textarea>
                     </div>
                   </div>
 
@@ -197,7 +197,7 @@ class ContactPageComponent extends Component {
                     <label htmlFor="company" className="title">COMPANY</label>
                     {/* <input id="text" name="text" value="What your Mom calls you" /> */}
                     <div className="textarea-wrapper">
-                      <textarea id="name" ref="NativeDom_CompanyTextarea" name="company" rows="1" defaultValue="010XXXXXXXX"></textarea>
+                      <textarea id="name" ref="NativeDom_CompanyTextarea" name="company" rows="1" defaultValue=""></textarea>
                     </div>
                   </div>
 
@@ -205,7 +205,7 @@ class ContactPageComponent extends Component {
                   <div className="pure-group message-wrapper">
                     <label htmlFor="text-area" className="title">MESSAGE</label>
                     <div className="textarea-wrapper">
-                      <textarea id="message" ref="NativeDom_MessageTextarea" name="message" rows="8" defaultValue="text"></textarea>
+                      <textarea id="message" ref="NativeDom_MessageTextarea" name="message" rows="8" defaultValue=""></textarea>
                     </div>
                   </div>
 
@@ -213,7 +213,7 @@ class ContactPageComponent extends Component {
                     <label htmlFor="mobile" className="title">MOBILE</label>
                     {/* <input id="text" name="text" value="What your Mom calls you" /> */}
                     <div className="textarea-wrapper">
-                      <textarea id="name" ref="NativeDom_MobileTextarea" name="mobile" rows="1" defaultValue="010XXXXXXXX"></textarea>
+                      <textarea id="name" ref="NativeDom_MobileTextarea" name="mobile" rows="1" defaultValue=""></textarea>
                     </div>
                   </div>
 
@@ -222,7 +222,7 @@ class ContactPageComponent extends Component {
                     <label htmlFor="email" className="title">EMAIL</label>
                     {/* <input id="email" name="email" type="email" required value="your.name@email.com" /> */}
                     <div className="textarea-wrapper">
-                      <textarea id="email" ref="NativeDom_EmailTextarea" name="email" rows="1"></textarea>
+                      <textarea id="email" ref="NativeDom_EmailTextarea" name="email" rows="1" defaultValue=""></textarea>
                     </div>
                   </div>
 
