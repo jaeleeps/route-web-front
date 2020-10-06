@@ -49,7 +49,9 @@ class ContactPageComponent extends Component {
     console.log(this.refs)
     setImmediate(() => {
       this.refs.NativeDom_NameTextarea.value = ''
+      this.refs.NativeDom_CompanyTextarea.value = ''
       this.refs.NativeDom_MessageTextarea.value = ''
+      this.refs.NativeDom_MobileTextarea.value = ''
       this.refs.NativeDom_EmailTextarea.value = ''
     }, 1000)
   }
@@ -187,7 +189,15 @@ class ContactPageComponent extends Component {
                     <label htmlFor="text" className="title">NAME</label>
                     {/* <input id="text" name="text" value="What your Mom calls you" /> */}
                     <div className="textarea-wrapper">
-                      <textarea id="name" ref="NativeDom_NameTextarea" name="name" rows="1" defaultValue="010XXXXXXXX"></textarea>
+                      <textarea id="name" ref="NativeDom_NameTextarea" name="name" rows="1" defaultValue="name"></textarea>
+                    </div>
+                  </div>
+
+                  <div className="pure-group mobile-wrapper">
+                    <label htmlFor="company" className="title">COMPANY</label>
+                    {/* <input id="text" name="text" value="What your Mom calls you" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="name" ref="NativeDom_CompanyTextarea" name="company" rows="1" defaultValue="010XXXXXXXX"></textarea>
                     </div>
                   </div>
 
@@ -196,6 +206,14 @@ class ContactPageComponent extends Component {
                     <label htmlFor="text-area" className="title">MESSAGE</label>
                     <div className="textarea-wrapper">
                       <textarea id="message" ref="NativeDom_MessageTextarea" name="message" rows="8" defaultValue="text"></textarea>
+                    </div>
+                  </div>
+
+                  <div className="pure-group mobile-wrapper">
+                    <label htmlFor="mobile" className="title">MOBILE</label>
+                    {/* <input id="text" name="text" value="What your Mom calls you" /> */}
+                    <div className="textarea-wrapper">
+                      <textarea id="name" ref="NativeDom_MobileTextarea" name="mobile" rows="1" defaultValue="010XXXXXXXX"></textarea>
                     </div>
                   </div>
 
