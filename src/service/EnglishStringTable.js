@@ -195,7 +195,7 @@ export const EnglishStringTable = {
             profile_img_src: ImageTable.PROFILE_IMAGE.HAYOON_JANG.NORMAL,
             university: "Erasmus University of Rotterdam",
             major: "International Business Administration",
-            positions: ["PRESIDENT", "HEAD of STRATEGY"],
+            positions: ["PRESIDENT", "HEAD of STRATEGY TEAM"],
             contact: {
               email: "oylimpus@naver.com",
               mobile: "010-4430-0796(+31 619952056)",
@@ -360,7 +360,7 @@ export const EnglishStringTable = {
             profile_img_src: ImageTable.PROFILE_IMAGE.HYEONA_CHOO.NORMAL,
             university: "Korea University",
             major: "B.A. in Media & Communication",
-            positions: ["IT Manager"],
+            positions: ["IT Manager", "Steategy Analyst"],
             contact: {
               email: "5161114@naver.com",
               mobile: "010-9602-8575",
