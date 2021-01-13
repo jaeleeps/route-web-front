@@ -27,6 +27,7 @@ class AboutPageComponent extends Component {
           ></div>
         ) : null;
 
+        
       return (
         <div className="paragraph-wrapper">
           <span className="highlight" style={{ color: para.highlight_color }}>
@@ -37,7 +38,6 @@ class AboutPageComponent extends Component {
         </div>
       );
     });
-
     return (
       <div className="about-page-component-wrapper page-component-wrapper">
         <div className="about-page-main-content-wrapper">
@@ -60,14 +60,14 @@ class AboutPageComponent extends Component {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/KPP42p9TQT8?list=PLErqheOv0D5uYsfeMOGb-hdWe8IiO8PYz"
+                  src="https://www.youtube.com/embed/JleG3yufCLM"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
 
-              {/* <iframe width="1280" height="720" src="https://www.youtube.com/embed/KPP42p9TQT8?list=PLErqheOv0D5uYsfeMOGb-hdWe8IiO8PYz" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              {/* <iframe width="1280" height="720" src="https://www.youtube.com/embed/JleG3yufCLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
               {/* <div className="description-img-wrapper">
                 <Carousel showArrows={true}>
